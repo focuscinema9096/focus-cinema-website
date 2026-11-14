@@ -84,22 +84,10 @@
   // Video Theater Modal
   const videoData = {
     'showreel': {
-      title: 'Grand Mercure GIFT City — 5-Star Hotel Film',
-      category: 'Hospitality & Luxury Hotel',
-      desc: 'Cinematic property tour, aerial drone footage, and luxury interior cinematography filmed at Gandhinagar, Gujarat.',
-      youtubeId: 'C2CJpW53Ucw'
-    },
-    'novotel': {
-      title: 'Novotel Ahmedabad — Commercial Hospitality Film',
+      title: 'Grand Mercure GIFT City — Agency Showreel',
       category: 'Hospitality & Commercial',
-      desc: 'International brand hotel interiors, luxury suites, banquet halls, and modern hospitality commercial filmed in Ahmedabad.',
-      youtubeId: 'VKlBivu3vtQ'
-    },
-    'manali': {
-      title: 'Himalayan Luxury, Manali — Resort Cinematography',
-      category: 'Resort & Mountain Drone',
-      desc: 'Alpine luxury resort coverage with dramatic Himalayan mountain vistas and high-altitude drone cinematography.',
-      youtubeId: 'C51DS185BTU'
+      desc: 'Cinematic property tour, aerial drone footage, and luxury interior cinematography filmed at Gandhinagar Gujarat.',
+      youtubeId: 'C2CJpW53Ucw'
     },
     'realestate': {
       title: 'Real Estate Drone Walk-Through',
@@ -107,29 +95,17 @@
       desc: 'High-rise residential property showcase with dusk lighting, architectural framing, and natural material textures.',
       youtubeId: '7DN4Z1Aokmc'
     },
-    'lucknow': {
-      title: 'Real Estate Land Shoot in Lucknow',
-      category: 'Commercial Acreage & Drone Survey',
-      desc: 'High-resolution aerial perimeter mapping and open plot development showcase with contextual landmarks.',
-      youtubeId: 'q498bW1mNeU'
-    },
-    'palghar': {
-      title: 'Palghar Drone Tour — Coastal Landscape',
-      category: 'Drone & Nature Cinematography',
-      desc: 'Scenic coastal acreage, lush greenery, and architectural drone perspective in Palghar.',
-      youtubeId: '376QBMp52XY'
-    },
     'udaipur': {
       title: 'The City of Lakes — Udaipur Drone Shoot',
       category: 'Tourism & Brand Film',
       desc: 'City Palace and Lake Pichola captured at golden hour with licensed aerial cinematography.',
       youtubeId: 'NiT_kLc16_U'
     },
-    'marriott': {
-      title: 'Fairfield by Marriott Vadodara — Interior Walk-Through',
-      category: 'Hospitality & Architectural Walk-Through',
-      desc: 'Contemporary hotel architecture, suite walkthrough, and ambient lighting filmed at Marriott Vadodara.',
-      youtubeId: 'ygqOHFK4-OU'
+    'lucknow': {
+      title: 'Real Estate Land Shoot in Lucknow',
+      category: 'Commercial Acreage & Drone Survey',
+      desc: 'High-resolution aerial perimeter mapping and open plot development showcase with contextual landmarks.',
+      youtubeId: 'q498bW1mNeU'
     }
   };
 
@@ -195,7 +171,6 @@
   function setupPortfolioFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.work-card');
-    const groups = document.querySelectorAll('.portfolio-group');
     if (!filterBtns.length || !cards.length) return;
 
     filterBtns.forEach(btn => {
@@ -209,18 +184,12 @@
         cards.forEach(card => {
           const cardCat = card.getAttribute('data-category') || '';
           if (cat === 'all' || cardCat.includes(cat)) {
-            card.style.display = '';
+            card.style.display = 'block';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
           } else {
             card.style.display = 'none';
           }
-        });
-
-        // Toggle visibility of group sections if no cards match
-        groups.forEach(group => {
-          const visible = group.querySelectorAll('.work-card:not([style*="display: none"])');
-          group.style.display = visible.length > 0 ? '' : 'none';
         });
       });
     });

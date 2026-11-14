@@ -43,10 +43,4 @@
       <video:uploader info="https://focuscinemaa.com/">Focus Cinema</video:uploader>
     </video:video>
   </url>
-  <url>
-    <loc>https://focuscinemaa.com/portfolio.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 </urlset>
