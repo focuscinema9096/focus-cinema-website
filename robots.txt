@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /vendor/
+Disallow: /support.js
+
+# Google Image & Media Crawlers
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /favicon.svg
+
+# Sitemaps
+Sitemap: https://focuscinemaa.com/sitemap.xml
