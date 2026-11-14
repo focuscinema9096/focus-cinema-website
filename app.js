@@ -1,7 +1,7 @@
 /**
  * Focus Cinema — Interactive Experience Engine
  * Handles: Viewfinder cursor, Video Theater Modal, Category Filtering,
- * Booking Drawer/Modal, Web Audio SFX, and Responsive Controls.
+ * Booking Drawer/Modal, and Responsive Controls.
  */
 
 (function () {
@@ -9,81 +9,9 @@
 
   // State
   const state = {
-    audioEnabled: false,
     activeCategory: 'all',
-    activeVideoId: null,
-    audioCtx: null
+    activeVideoId: null
   };
-
-  // Sound Synthesizer (Web Audio API - zero latency, zero external assets)
-  function initAudio() {
-    if (!state.audioCtx) {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (AudioContext) {
-        state.audioCtx = new AudioContext();
-      }
-    }
-    if (state.audioCtx && state.audioCtx.state === 'suspended') {
-      state.audioCtx.resume();
-    }
-  }
-
-  function playShutterSound() {
-    if (!state.audioEnabled) return;
-    try {
-      initAudio();
-      if (!state.audioCtx) return;
-      const ctx = state.audioCtx;
-      const t = ctx.currentTime;
-
-      // Click / Shutter mechanical transient
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(800, t);
-      osc.frequency.exponentialRampToValueAtTime(120, t + 0.04);
-      gain.gain.setValueAtTime(0.15, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(t);
-      osc.stop(t + 0.04);
-
-      // Secondary shutter release click
-      const osc2 = ctx.createOscillator();
-      const gain2 = ctx.createGain();
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(1400, t + 0.025);
-      osc2.frequency.exponentialRampToValueAtTime(300, t + 0.06);
-      gain2.gain.setValueAtTime(0.08, t + 0.025);
-      gain2.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
-      osc2.connect(gain2);
-      gain2.connect(ctx.destination);
-      osc2.start(t + 0.025);
-      osc2.stop(t + 0.06);
-    } catch (e) {
-      // Audio error ignored silently
-    }
-  }
-
-  // Audio Toggle Button
-  function setupAudioToggle() {
-    const audioBtn = document.getElementById('audio-toggle-btn');
-    if (!audioBtn) return;
-    audioBtn.addEventListener('click', () => {
-      state.audioEnabled = !state.audioEnabled;
-      if (state.audioEnabled) {
-        initAudio();
-        playShutterSound();
-      }
-      audioBtn.classList.toggle('active', state.audioEnabled);
-      audioBtn.setAttribute('aria-pressed', state.audioEnabled ? 'true' : 'false');
-      const label = audioBtn.querySelector('.audio-label');
-      if (label) {
-        label.textContent = state.audioEnabled ? 'SFX ON' : 'SFX OFF';
-      }
-    });
-  }
 
   // Custom Camera Viewfinder Cursor
   function setupViewfinderCursor() {
@@ -141,7 +69,6 @@
 
     window.addEventListener('mousedown', () => {
       root.classList.add('fc-down');
-      playShutterSound();
     });
 
     window.addEventListener('mouseup', () => {
@@ -338,19 +265,6 @@
     }
   }
 
-  // Lightbox for Photography Section
-  function setupPhotoLightbox() {
-    const photoCards = document.querySelectorAll('.photo-frame');
-    photoCards.forEach((frame, idx) => {
-      frame.addEventListener('click', () => {
-        const label = frame.getAttribute('data-label') || `Photo ${idx + 1}`;
-        // Micro feedback
-        frame.classList.add('clicked');
-        setTimeout(() => frame.classList.remove('clicked'), 300);
-      });
-    });
-  }
-
   // Smooth Timecode Counter in Showreel & Hero HUD
   function setupHUDTimecode() {
     const tcEl = document.getElementById('hud-timecode');
@@ -368,11 +282,9 @@
   // Initialize all modules upon DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     setupViewfinderCursor();
-    setupAudioToggle();
     setupVideoModal();
     setupPortfolioFilter();
     setupBookingModal();
-    setupPhotoLightbox();
     setupHUDTimecode();
   });
 })();

@@ -420,22 +420,10 @@
         </a>
 
         <nav class="nav" aria-label="Primary navigation">
-          <a href="#portfolio">Work</a>
+          <a href="#portfolio">Portfolio</a>
           <a href="#services">Services</a>
-          <a href="#photography">Photography</a>
           <a href="#process">Process</a>
           <a href="#faq">FAQ</a>
-          <a href="#reviews">Reviews</a>
-          
-          <button type="button" id="audio-toggle-btn" class="audio-toggle-pill" aria-pressed="false" aria-label="Toggle camera sound effects">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-            </svg>
-            <span class="audio-label">SFX OFF</span>
-          </button>
-
           <a href="#contact" data-open-booking class="nav-cta">Start a project</a>
         </nav>
       </header>
@@ -595,8 +583,10 @@
         <section id="portfolio" class="work-section container">
           <div class="work-header">
             <div>
-              <div class="section-kicker">Featured Projects</div>
-              <h2 class="section-heading">Selected work &amp; films</h2>
+              <div class="section-kicker">
+                <span class="kicker-dot"></span>Featured Films &amp; Projects
+              </div>
+              <h2 class="section-heading">Portfolio</h2>
             </div>
 
             <!-- Filter Chips -->
@@ -604,6 +594,7 @@
               <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Films</button>
               <button type="button" class="filter-btn" data-filter="real-estate" role="tab" aria-selected="false">Real Estate</button>
               <button type="button" class="filter-btn" data-filter="drone" role="tab" aria-selected="false">Drone &amp; Aerial</button>
+              <button type="button" class="filter-btn" data-filter="hospitality" role="tab" aria-selected="false">Hospitality</button>
               <button type="button" class="filter-btn" data-filter="tourism" role="tab" aria-selected="false">Tourism &amp; Brand</button>
             </div>
           </div>
@@ -637,7 +628,35 @@
               </div>
             </article>
 
-            <!-- PROJECT 2: Udaipur -->
+            <!-- PROJECT 2: Grand Mercure Commercial -->
+            <article class="work-card" data-category="hospitality drone" data-video="showreel">
+              <div class="work-thumb thumb-hospitality">
+                <span class="work-quality-tag">4K HDR</span>
+                <span class="work-play-bubble" aria-label="Play Grand Mercure GIFT City Film">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+
+                <a href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener noreferrer" class="work-yt-badge no-modal">
+                  <svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true">
+                    <rect width="20" height="14" rx="4" fill="#FFFFFF"></rect>
+                    <path d="M8 4l5 3-5 3z" fill="#D90000"></path>
+                  </svg>
+                  Watch on YouTube
+                </a>
+              </div>
+
+              <div class="work-meta">
+                <div>
+                  <h3 class="work-title">Grand Mercure GIFT City</h3>
+                  <p class="work-snippet">5-star luxury hotel architecture, banquet suites, and fine dining commercial film.</p>
+                </div>
+                <span class="work-cat">Hospitality</span>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: Udaipur -->
             <article class="work-card" data-category="drone tourism" data-video="udaipur">
               <div class="work-thumb thumb-udaipur">
                 <span class="work-quality-tag">4K HDR</span>
@@ -665,7 +684,7 @@
               </div>
             </article>
 
-            <!-- PROJECT 3: Lucknow -->
+            <!-- PROJECT 4: Lucknow -->
             <article class="work-card" data-category="real-estate drone" data-video="lucknow">
               <div class="work-thumb thumb-lucknow">
                 <span class="work-quality-tag">4K HDR</span>
@@ -692,59 +711,6 @@
                 <span class="work-cat">Real Estate</span>
               </div>
             </article>
-          </div>
-        </section>
-
-        <!-- PHOTOGRAPHY SECTION -->
-        <section id="photography" class="photo-section container">
-          <div class="photo-header">
-            <div>
-              <div class="section-kicker">
-                <span class="kicker-dot"></span>Still Imagery
-              </div>
-              <h2 class="section-heading">High-quality photography.</h2>
-            </div>
-            <p class="photo-subtitle">
-              Six curated frames that demonstrate our treatment of natural light, spatial depth, and architectural geometry.
-            </p>
-          </div>
-
-          <div class="photo-grid">
-            <div class="photo-frame" data-label="Architectural Facade">
-              <span class="photo-badge">Frame 01</span>
-              <span class="photo-title">Twilight Facade</span>
-              <span class="photo-meta">50mm · f/4 · ISO 100</span>
-            </div>
-
-            <div class="photo-frame" data-label="Luxury Interior">
-              <span class="photo-badge">Frame 02</span>
-              <span class="photo-title">Interior Textures</span>
-              <span class="photo-meta">24mm · f/2.8 · Natural Light</span>
-            </div>
-
-            <div class="photo-frame" data-label="Aerial Grid">
-              <span class="photo-badge">Frame 03</span>
-              <span class="photo-title">Aerial Geometry</span>
-              <span class="photo-meta">Drone Hasselblad · Top-Down</span>
-            </div>
-
-            <div class="photo-frame" data-label="Hospitality Suite">
-              <span class="photo-badge">Frame 04</span>
-              <span class="photo-title">Hospitality Suite</span>
-              <span class="photo-meta">35mm · Controlled Shadows</span>
-            </div>
-
-            <div class="photo-frame" data-label="Urban Perspective">
-              <span class="photo-badge">Frame 05</span>
-              <span class="photo-title">Urban Horizon</span>
-              <span class="photo-meta">85mm · Compressed Depth</span>
-            </div>
-
-            <div class="photo-frame" data-label="Detail & Materiality">
-              <span class="photo-badge">Frame 06</span>
-              <span class="photo-title">Material Craft</span>
-              <span class="photo-meta">Macro · Wood &amp; Brass</span>
-            </div>
           </div>
         </section>
 
@@ -871,29 +837,7 @@
           </div>
         </section>
 
-        <!-- GOOGLE REVIEWS SECTION -->
-        <section id="reviews" class="reviews-section container">
-          <div class="reviews-box">
-            <div class="reviews-left">
-              <div class="reviews-stars" aria-label="5 out of 5 stars">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFB400" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFB400" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFB400" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFB400" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFB400" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
-              </div>
-              <h2 class="reviews-heading">Worked with Focus Cinema?</h2>
-              <p class="reviews-text">Your rating and review on Google help other brands find us. It takes less than a minute.</p>
-            </div>
-            
-            <a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener noreferrer" class="reviews-btn">
-              Rate &amp; review us on Google
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M7 17L17 7M8 7h9v9"></path>
-              </svg>
-            </a>
-          </div>
-        </section>
+        <!-- GOOGLE REVIEWS SECTION REMOVED PER USER SPEC -->
       </main>
 
       <!-- FOOTER -->

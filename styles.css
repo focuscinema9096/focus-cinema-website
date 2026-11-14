@@ -438,28 +438,6 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   color: var(--ink);
 }
 
-.audio-toggle-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.4);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: all 0.2s ease;
-}
-
-.audio-toggle-pill:hover,
-.audio-toggle-pill.active {
-  background: var(--ink);
-  color: var(--light-ink);
-  border-color: var(--ink);
-}
-
 .nav .nav-cta {
   padding: 12px 24px;
   background: var(--ink);
@@ -1025,6 +1003,10 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   background-image: url('./assets/thumb-realestate.jpg');
 }
 
+.thumb-hospitality {
+  background-image: url('./assets/grand-mercure-showreel.jpg');
+}
+
 .thumb-udaipur {
   background-image: url('./assets/thumb-udaipur.jpg');
 }
@@ -1120,78 +1102,6 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   background: var(--surface-hover);
   padding: 4px 10px;
   border-radius: 6px;
-  letter-spacing: 0.04em;
-}
-
-/* =========================================
-   PHOTOGRAPHY SECTION
-   ========================================= */
-.photo-section {
-  padding-bottom: 120px;
-}
-
-.photo-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 36px;
-}
-
-.photo-subtitle {
-  margin: 0;
-  max-width: 440px;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
-  gap: 14px;
-}
-
-.photo-frame {
-  aspect-ratio: 4 / 3;
-  border: 2px dashed #BDB5AB;
-  border-radius: 16px;
-  background-image: repeating-linear-gradient(135deg, #E2DCD5 0 18px, #DDD6CE 18px 36px);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.25s ease;
-  cursor: pointer;
-}
-
-.photo-frame:hover {
-  border-color: var(--ink);
-  transform: translateY(-2px);
-  background-color: var(--surface-hover);
-}
-
-.photo-badge {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--accent-dark-text);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.photo-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--ink);
-}
-
-.photo-meta {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--muted);
   letter-spacing: 0.04em;
 }
 
@@ -1382,72 +1292,6 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   padding: 6px 0;
   display: inline-block;
   text-decoration: underline;
-}
-
-/* =========================================
-   GOOGLE REVIEWS BANNER
-   ========================================= */
-.reviews-section {
-  padding-bottom: 72px;
-}
-
-.reviews-box {
-  background: var(--ink);
-  color: var(--light-ink);
-  border-radius: 20px;
-  padding: 28px 32px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px 32px;
-}
-
-.reviews-left {
-  flex: 1 1 300px;
-  min-width: 0;
-}
-
-.reviews-stars {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-
-.reviews-heading {
-  margin: 0;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(22px, 2.6vw, 30px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.reviews-text {
-  margin: 8px 0 0;
-  max-width: 520px;
-  font-size: 15px;
-  color: var(--light-muted);
-  line-height: 1.45;
-}
-
-.reviews-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 48px;
-  padding: 0 24px;
-  background: var(--light-ink);
-  color: var(--ink);
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.reviews-btn:hover {
-  background: #FFFFFF;
-  transform: translateY(-1px);
 }
 
 /* =========================================
@@ -1897,7 +1741,6 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   .bg-filmwrap, .tl, .wave, .wheel, .vf { display: none; }
   .bg-big { width: 520px; height: 520px; right: -200px; }
   .services-layout { flex-direction: column; gap: 40px; }
-  .photo-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -1937,9 +1780,6 @@ html.fc-down .fc-dot { animation: none; transform: scale(0.7); }
   }
   .booking-modal-container {
     padding: 24px 20px;
-  }
-  .photo-grid {
-    grid-template-columns: 1fr;
   }
 }
 
