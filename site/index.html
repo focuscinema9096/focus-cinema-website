@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focus Cinema | Video Production &amp; Advertising Agency, Mumbai</title>
+<meta name="description" content="Focus Cinema is a video production and advertising agency in the Mumbai region: cinematic real estate films, drone shoots, brand films, hospitality, events, weddings and podcast shoots.">
+<link rel="canonical" href="https://focuscinemaa.com/">
+<meta name="theme-color" content="#ECE7E2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Focus Cinema">
+<meta property="og:title" content="Focus Cinema | Video Production &amp; Advertising Agency, Mumbai">
+<meta property="og:description" content="Focus Cinema is a video production and advertising agency in the Mumbai region: cinematic real estate films, drone shoots, brand films, hospitality, events, weddings and podcast shoots.">
+<meta property="og:url" content="https://focuscinemaa.com/">
+<meta property="og:image" content="https://focuscinemaa.com/images/logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+
+body{margin:0;background:#ECE7E2}
+a{color:inherit;text-decoration:none}
+.nav a:hover{color:#141210}
+.row-link:hover{background:#E1DBD4}
+.thumb1{background-image:url(images/real-estate-walkthrough.jpg);background-size:cover;background-position:center}
+.thumb2{background-image:url(images/udaipur-drone.jpg);background-size:cover;background-position:center}
+.thumb3{background-image:url(images/lucknow-land.jpg);background-size:cover;background-position:center}
+@keyframes reelpan{0%{background-size:108% auto;background-position:30% 60%}100%{background-size:122% auto;background-position:70% 40%}}
+@media(prefers-reduced-motion:reduce){}
+.bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.bg-grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:64px 64px;animation:gridmove 14s linear infinite}
+.bg-scan{position:absolute;left:0;right:0;top:-200px;height:180px;opacity:.05;background:linear-gradient(transparent,currentColor,transparent);animation:scan 11s linear infinite}
+.floor{position:absolute;left:-20%;right:-20%;top:6%;height:760px;opacity:.13;transform:perspective(500px) rotateX(62deg);transform-origin:top;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:80px 80px;-webkit-mask-image:linear-gradient(transparent,#000 35%,transparent);mask-image:linear-gradient(transparent,#000 35%,transparent);animation:floor 4s linear infinite}
+.beam{position:absolute;top:-40px;right:2%;width:1100px;height:1000px;opacity:.55;background:linear-gradient(200deg,#fff,transparent 72%);clip-path:polygon(90% 0,100% 0,38% 100%,0 100%);animation:flicker 6s steps(1) infinite}
+.bg-vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 15%,transparent 45%,rgba(90,60,40,.1))}
+.bg-big{position:absolute;top:60px;right:-260px;width:780px;height:780px;opacity:.07}
+.wheel{position:absolute;top:46%;left:-90px;width:300px;height:300px;border-radius:50%;opacity:.22;background:conic-gradient(#ff4d4d,#ffd24d,#7dff4d,#4dffe0,#4d7dff,#d24dff,#ff4d4d);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 70%,transparent 71%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 70%,transparent 71%);animation:spin 50s linear infinite}
+.bg-film{position:absolute;top:0;height:100%;opacity:.14}
+.bg-film .roll{animation:roll 2.4s linear infinite}
+.band{position:absolute;left:0;opacity:.14}
+.band .slide{animation:slide 8s linear infinite}
+.ic{position:absolute;opacity:.17;animation:floaty 16s ease-in-out infinite}
+.ic svg,.bg-big svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.spin svg{animation:spin 60s linear infinite}
+.tag{position:absolute;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;opacity:.45;animation:blink 3s steps(2,end) infinite}
+.wave{position:absolute;display:flex;align-items:center;gap:5px;opacity:.35}
+.wave span{flex:1;height:100%;background:currentColor;border-radius:2px;transform:scaleY(.15);animation:bar 1.1s ease-in-out infinite}
+.wave span:nth-child(2n){animation-duration:.8s;animation-delay:-.2s}
+.wave span:nth-child(3n){animation-duration:1.4s;animation-delay:-.5s}
+.wave span:nth-child(5n){animation-duration:.9s;animation-delay:-.7s}
+.wave span:nth-child(7n){animation-duration:1.7s}
+.tl{position:absolute;left:9%;right:9%;height:74px;opacity:.3}
+.tl svg{position:absolute;inset:0;width:100%;height:100%}
+.tl .ph{position:absolute;top:-8px;bottom:-8px;width:2px;background:currentColor;animation:play 14s linear infinite}
+.tl .ph::before{content:"";position:absolute;top:0;left:-5px;border:6px solid transparent;border-top-color:currentColor}
+.af{position:absolute;width:150px;height:110px;opacity:.4;animation:af 9s ease-in-out infinite}
+.af svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round}
+.dust{position:absolute;width:3px;height:3px;border-radius:50%;background:currentColor;opacity:0;animation:rise 18s linear infinite}
+.focus{animation:pull 2.2s cubic-bezier(.2,.7,.2,1) both}
+.float{animation:float2 8s ease-in-out infinite}
+.vf{position:absolute;width:84px;height:84px;border:4px solid #141210;animation:breathe 4s ease-in-out infinite}
+.marq-track{display:flex;width:max-content;animation:marq 50s linear infinite}
+.marq-track:hover{animation-play-state:paused}
+.marq-track span{font-family:'Outfit',sans-serif;font-weight:600;font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:#F1ECE6;padding:0 28px;white-space:nowrap}
+.marq-track i{display:block;flex:none;width:7px;height:7px;background:#E10600;transform:rotate(45deg);align-self:center}
+@keyframes gridmove{to{background-position:64px 64px,64px 64px}}
+@keyframes scan{to{top:100%}}
+@keyframes floor{to{background-position:0 80px,0 0}}
+@keyframes flicker{0%,100%{opacity:.55}12%{opacity:.3}18%{opacity:.7}46%{opacity:.4}52%{opacity:.65}80%{opacity:.35}}
+@keyframes roll{to{transform:translateY(36px)}}
+@keyframes slide{to{transform:translateX(120px)}}
+@keyframes floaty{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(22px,-34px) rotate(7deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes blink{50%{opacity:.1}}
+@keyframes bar{50%{transform:scaleY(1)}}
+@keyframes play{from{left:0}to{left:100%}}
+@keyframes af{0%,100%{transform:translate(0,0) scale(1)}30%{transform:translate(-160px,80px) scale(.7)}60%{transform:translate(90px,170px) scale(1.2)}}
+@keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.5}100%{transform:translateY(-420px);opacity:0}}
+@keyframes pull{from{filter:blur(16px);opacity:.15}to{filter:blur(0);opacity:1}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(.88)}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media(max-width:900px){.bg-filmwrap,.tl,.wave,.wheel,.vf{display:none}.bg-big{width:520px;height:520px;right:-200px}}
+@media(prefers-reduced-motion:reduce){.bg *,.focus,.float,.vf,.marq-track{animation:none!important}}
+/* Hide the system cursor only when JS confirms a mouse-like device */
+  html.fc-cursor-on, html.fc-cursor-on * { cursor: none !important; }
+
+  /* Two separate fixed layers (not nested) so mix-blend-mode can see the real page behind them */
+  .fc-frame, .fc-dot { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;
+                       opacity: 0; transition: opacity .25s ease; will-change: transform; }
+  html.fc-visible .fc-frame, html.fc-visible .fc-dot { opacity: 1; }
+
+  /* Brackets: white + difference blend = dark on light pages, light on dark pages */
+  .fc-frame { width: 44px; height: 44px; margin: -22px 0 0 -22px; mix-blend-mode: difference; }
+  .fc-frame svg { display: block; width: 100%; height: 100%; overflow: visible; transition: transform .22s cubic-bezier(.2,.8,.2,1); }
+  .fc-frame path { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: square; stroke-linejoin: miter;
+                   transition: transform .22s cubic-bezier(.2,.8,.2,1); }
+
+  /* Recording dot (kept un-blended so it is always crimson) */
+  .fc-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #D90000;
+            box-shadow: 0 0 0 2px rgba(255,255,255,.92), 0 0 0 3px rgba(20,18,16,.25);
+            transition: scale .2s ease, opacity .25s ease; }
+
+  /* FOCUS-LOCK on clickable things: brackets snap inward, dot pulses */
+  html.fc-link .fc-tl { transform: translate(5px, 5px); }
+  html.fc-link .fc-tr { transform: translate(-5px, 5px); }
+  html.fc-link .fc-br { transform: translate(-5px, -5px); }
+  html.fc-link .fc-bl { transform: translate(5px, -5px); }
+  html.fc-link .fc-dot { animation: fc-pulse 1s ease-in-out infinite; }
+  @keyframes fc-pulse { 0%,100% { scale: 1.25; } 50% { scale: 1.75; } }
+
+  /* SHUTTER on press: brackets clamp hard, whole frame flashes smaller */
+  html.fc-down .fc-tl { transform: translate(9px, 9px); }
+  html.fc-down .fc-tr { transform: translate(-9px, 9px); }
+  html.fc-down .fc-br { transform: translate(-9px, -9px); }
+  html.fc-down .fc-bl { transform: translate(9px, -9px); }
+  html.fc-down .fc-dot { animation: none; scale: .7; }
+
+  /* Touch / tablets / no-hover devices: custom cursor never appears */
+  @media (pointer: coarse), (hover: none) { .fc-frame, .fc-dot { display: none !important; } }
+  @media (prefers-reduced-motion: reduce) { html.fc-link .fc-dot { animation: none; scale: 1.4; } .fc-frame path { transition: none; } }
+
+
+.rbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.75);background:rgba(20,18,16,.55);color:#fff;font:600 15px/1 'Inter',system-ui,sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.rbtn.yt{background:#D90000;border-color:#D90000}
+#reel .ctl{display:none}
+#reel.is-playing .ctl{display:inline-flex}
+#reel.is-playing #reel-play{display:none}
+#reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+#reel :focus-visible{outline-color:#fff}
+.reel-bar{position:absolute;left:20px;right:20px;bottom:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+@media(max-width:640px){
+.reel-bar{position:static;margin-top:14px}
+.rbtn:not(.yt){color:#141210;border-color:#141210;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.reel-stage{border-radius:18px !important}
+.rplay{width:72px !important;height:72px !important}
+}
+:focus-visible{outline:3px solid #141210;outline-offset:3px}
+html{scroll-behavior:smooth}
+img{max-width:100%}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Focus Cinema",
+  "description": "Video production and advertising agency: real estate films, drone cinematography, brand films, hospitality, events, weddings, podcast shoots, editing and AI content.",
+  "url": "https://focuscinemaa.com/",
+  "logo": "https://focuscinemaa.com/images/logo.jpg",
+  "image": "https://focuscinemaa.com/images/logo.jpg",
+  "telephone": "+919096012144",
+  "email": "focuscinemaproduction@gmail.com",
+  "founder": {"@type": "Person", "name": "Faezan Khan"},
+  "areaServed": "Mumbai Metropolitan Region, India",
+  "address": {"@type": "PostalAddress", "addressRegion": "Maharashtra", "addressCountry": "IN"},
+  "sameAs": ["https://www.instagram.com/focuscinemaa","https://www.youtube.com/@FocusCinemaproduction"]
+}
+</script>
+</head>
+<body>
+
+<div style="background:#ECE7E2;color:#141210;font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;position:relative">
+
+<!-- ANIMATED BACKGROUND -->
+<div class="bg" aria-hidden="true" style="color:#141210">
+<div class="bg-grid"></div>
+<div class="bg-scan"></div>
+<div class="floor"></div>
+<div class="beam"></div>
+<div class="bg-vig"></div>
+<div class="bg-big spin"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"></circle><circle cx="50" cy="50" r="38"></circle><circle cx="50" cy="50" r="14"></circle><path d="M50 12l14 26M88 50L62 64M50 88L36 62M12 50l26-14M77 23L60 42M77 77L58 60M23 77l19-17M23 23l19 17"></path></svg></div>
+<div class="wheel"></div>
+<div class="bg-filmwrap">
+<svg class="bg-film" style="left:12px" width="46" viewBox="0 0 46 400" preserveAspectRatio="none"><defs><pattern id="fp" width="46" height="36" patternUnits="userSpaceOnUse"><rect x="6" y="9" width="10" height="18" rx="2" fill="currentColor"></rect><rect x="30" y="9" width="10" height="18" rx="2" fill="currentColor"></rect></pattern></defs><rect class="roll" x="0" y="-36" width="46" height="6000" fill="url(#fp)"></rect><rect x="1" y="0" width="44" height="100%" fill="none" stroke="currentColor" stroke-width="2"></rect></svg>
+<svg class="bg-film" style="right:12px" width="46" viewBox="0 0 46 400" preserveAspectRatio="none"><rect class="roll" style="animation-direction:reverse" x="0" y="-36" width="46" height="6000" fill="url(#fp)"></rect><rect x="1" y="0" width="44" height="100%" fill="none" stroke="currentColor" stroke-width="2"></rect></svg>
+</div>
+<svg class="band" style="top:25%" width="100%" height="70"><defs><pattern id="fr" width="120" height="70" patternUnits="userSpaceOnUse"><rect x="8" y="16" width="104" height="38" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="14" y="4" width="8" height="6" rx="1" fill="currentColor"></rect><rect x="56" y="4" width="8" height="6" rx="1" fill="currentColor"></rect><rect x="98" y="4" width="8" height="6" rx="1" fill="currentColor"></rect><rect x="14" y="60" width="8" height="6" rx="1" fill="currentColor"></rect><rect x="56" y="60" width="8" height="6" rx="1" fill="currentColor"></rect><rect x="98" y="60" width="8" height="6" rx="1" fill="currentColor"></rect></pattern></defs><rect class="slide" x="-120" y="0" width="4000" height="70" fill="url(#fr)"></rect></svg>
+<svg class="band" style="top:91%" width="100%" height="70"><rect class="slide" style="animation-direction:reverse" x="-120" y="0" width="4000" height="70" fill="url(#fr)"></rect></svg>
+<div class="wave" style="top:39%;right:6%;width:240px;height:50px;color:#D90000"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="tl" style="top:55%;color:#D90000"><svg viewBox="0 0 1000 74" preserveAspectRatio="none"><g fill="currentColor" fill-opacity=".15" stroke="currentColor" stroke-width="1.5"><rect vector-effect="non-scaling-stroke" x="10" y="0" width="180" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="210" y="0" width="90" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="320" y="0" width="260" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="600" y="0" width="140" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="760" y="0" width="230" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="60" y="26" width="120" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="200" y="26" width="300" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="520" y="26" width="170" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="720" y="26" width="250" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="0" y="52" width="260" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="280" y="52" width="80" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="380" y="52" width="400" height="20" rx="3"></rect><rect vector-effect="non-scaling-stroke" x="800" y="52" width="190" height="20" rx="3"></rect></g></svg><div class="ph"></div></div>
+<div class="af" style="top:12%;left:52%;color:#D90000"><svg viewBox="0 0 150 110"><path d="M4 30V4h26M120 4h26v26M146 80v26h-26M30 106H4V80M68 55h14M75 48v14"></path></svg></div>
+<div class="af" style="top:40%;left:26%;animation-delay:-4s;animation-duration:12s"><svg viewBox="0 0 150 110"><path d="M4 30V4h26M120 4h26v26M146 80v26h-26M30 106H4V80M68 55h14M75 48v14"></path></svg></div>
+<div class="ic" style="top:3%;left:6%;width:120px;height:120px"><svg viewBox="0 0 100 100"><rect x="14" y="40" width="50" height="34" rx="3"></rect><circle cx="30" cy="30" r="12"></circle><circle cx="52" cy="30" r="12"></circle><path d="M64 48l22-8v34l-22-8zM22 74v10M56 74v10"></path></svg></div>
+<div class="ic" style="top:11%;right:7%;width:110px;height:110px;animation-duration:19s;animation-delay:-5s;color:#D90000"><svg viewBox="0 0 100 100"><path d="M42 44L18 24M58 44l24-20M42 54L18 74M58 54l24 20"></path><rect x="40" y="42" width="20" height="14" rx="4"></rect><ellipse cx="14" cy="22" rx="11" ry="3.5"></ellipse><ellipse cx="86" cy="22" rx="11" ry="3.5"></ellipse><ellipse cx="14" cy="76" rx="11" ry="3.5"></ellipse><ellipse cx="86" cy="76" rx="11" ry="3.5"></ellipse><circle cx="50" cy="64" r="5"></circle></svg></div>
+<div class="ic" style="top:19%;left:3%;width:100px;height:100px;animation-duration:21s;animation-delay:-9s"><svg viewBox="0 0 100 100"><rect x="14" y="42" width="72" height="42" rx="3"></rect><path d="M14 40l-3-18 74-10 3 18zM26 20l8 14M44 17l8 14M62 14l8 14M14 58h72M30 42v42"></path></svg></div>
+<div class="ic spin" style="top:28%;right:4%;width:130px;height:130px;animation-duration:18s;animation-delay:-2s"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"></circle><circle cx="50" cy="50" r="6"></circle><circle cx="50" cy="26" r="8"></circle><circle cx="50" cy="74" r="8"></circle><circle cx="26" cy="50" r="8"></circle><circle cx="74" cy="50" r="8"></circle></svg></div>
+<div class="ic" style="top:36%;left:7%;width:110px;height:110px;animation-duration:17s;animation-delay:-7s;color:#D90000"><svg viewBox="0 0 100 100"><path d="M30 14h40l12 34H18zM38 14l-4 34M62 14l4 34M50 14v34M50 48v36M34 94l16-10 16 10"></path></svg></div>
+<div class="ic" style="top:44%;right:9%;width:100px;height:100px;animation-duration:20s;animation-delay:-11s"><svg viewBox="0 0 100 100"><rect x="30" y="18" width="40" height="22" rx="3"></rect><circle cx="40" cy="29" r="7"></circle><path d="M50 40v14M50 54L28 92M50 54L72 92M50 54v38"></path></svg></div>
+<div class="ic" style="top:52%;left:4%;width:90px;height:90px;animation-duration:22s;animation-delay:-4s"><svg viewBox="0 0 100 100"><rect x="40" y="12" width="20" height="40" rx="10"></rect><path d="M30 40v6a20 20 0 0040 0v-6M50 66v22M36 88h28"></path></svg></div>
+<div class="ic" style="top:58%;right:5%;width:100px;height:100px;animation-duration:18s;animation-delay:-8s;color:#D90000"><svg viewBox="0 0 100 100"><path d="M8 28V8h20M72 8h20v20M92 72v20H72M28 92H8V72M50 40v20M40 50h20"></path></svg></div>
+<div class="ic spin" style="top:84%;left:6%;width:120px;height:120px;animation-duration:20s;animation-delay:-6s"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40"></circle><circle cx="50" cy="50" r="30"></circle><circle cx="50" cy="50" r="12"></circle><path d="M50 20l10 20M80 50L60 60M50 80L40 60M20 50l20-10"></path></svg></div>
+<div class="ic" style="top:89%;right:8%;width:110px;height:110px;animation-duration:17s;animation-delay:-10s"><svg viewBox="0 0 100 100"><rect x="14" y="40" width="50" height="34" rx="3"></rect><circle cx="30" cy="30" r="12"></circle><circle cx="52" cy="30" r="12"></circle><path d="M64 48l22-8v34l-22-8zM22 74v10M56 74v10"></path></svg></div>
+<span class="tag" style="top:4%;right:22%">REC ●</span>
+<span class="tag" style="top:17%;left:16%;animation-delay:-1s">24 FPS</span>
+<span class="tag" style="top:8%;left:36%;animation-delay:-2s">SCENE 12 / TAKE 03</span>
+<span class="tag" style="top:33%;right:18%;animation-delay:-2s">F/2.8</span>
+<span class="tag" style="top:42%;left:44%;animation-delay:-0.7s">AF LOCK</span>
+<span class="tag" style="top:47%;left:20%;animation-delay:-1.5s">ISO 800</span>
+<span class="tag" style="top:60%;right:24%;animation-delay:-0.5s">4K</span>
+<span class="tag" style="top:86%;left:22%;animation-delay:-2.5s">TC 00:01:06</span>
+<span class="dust" style="left:8%;top:30%"></span><span class="dust" style="left:15%;top:62%;animation-delay:-4s;animation-duration:22s"></span><span class="dust" style="left:24%;top:18%;animation-delay:-9s"></span><span class="dust" style="left:31%;top:48%;animation-delay:-2s;animation-duration:15s"></span><span class="dust" style="left:39%;top:74%;animation-delay:-12s"></span><span class="dust" style="left:46%;top:9%;animation-delay:-6s;animation-duration:25s"></span><span class="dust" style="left:53%;top:36%;animation-delay:-14s"></span><span class="dust" style="left:61%;top:58%;animation-delay:-1s;animation-duration:20s"></span><span class="dust" style="left:68%;top:22%;animation-delay:-8s"></span><span class="dust" style="left:74%;top:44%;animation-delay:-16s;animation-duration:14s"></span><span class="dust" style="left:82%;top:68%;animation-delay:-5s"></span><span class="dust" style="left:88%;top:14%;animation-delay:-11s;animation-duration:23s"></span><span class="dust" style="left:93%;top:52%;animation-delay:-3s"></span><span class="dust" style="left:19%;top:88%;animation-delay:-7s;animation-duration:17s"></span><span class="dust" style="left:57%;top:92%;animation-delay:-13s"></span><span class="dust" style="left:78%;top:84%;animation-delay:-10s;animation-duration:21s"></span>
+</div>
+
+<div style="position:relative;z-index:1">
+
+<!-- NAV -->
+<header style="max-width:1280px;margin:0 auto;padding:28px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+<a href="#top" aria-label="Focus Cinema home" style="font-family:'Outfit',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.02em;display:flex;align-items:center;gap:12px;color:#141210">
+<svg width="30" height="30" viewBox="0 0 28 28" fill="none" stroke="#141210" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M3 9V3h6M19 3h6v6M25 19v6h-6M9 25H3v-6"></path><circle cx="14" cy="14" r="3.2" fill="#D90000" stroke="none"></circle></svg>
+<span>Foc<span style="color:#D90000">us</span> Cinema</span>
+</a>
+<nav class="nav" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px;font-size:15px;font-weight:500;color:#55504A">
+<a href="portfolio.html" style="padding:12px 0">Portfolio</a>
+<a href="#services" style="padding:12px 0">Services</a>
+<a href="packages.html" style="padding:12px 0">Packages</a>
+<a href="#process" style="padding:12px 0">Process</a>
+<a href="#contact" style="padding:12px 24px;background:#141210;border-radius:999px;color:#F1ECE6">Start a project</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="max-width:1280px;margin:0 auto;padding:56px 32px 72px;position:relative">
+<div class="vf" style="top:12px;left:8px;border-right:0;border-bottom:0" aria-hidden="true"></div>
+<div class="vf" style="top:12px;right:8px;border-left:0;border-bottom:0" aria-hidden="true"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:48px;align-items:center">
+<div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#141210;display:flex;align-items:center;gap:12px;margin-bottom:28px">
+<span style="width:10px;height:10px;border-radius:50%;background:#D90000"></span>Video production &amp; advertising agency
+</div>
+<h1 class="focus" style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(48px,8.4vw,124px);line-height:0.96;letter-spacing:-0.035em;text-wrap:balance">Premium films for brands that mean <span style="color:#D90000">business.</span></h1>
+<p style="margin:32px 0 0;max-width:520px;font-size:19px;color:#55504A;text-wrap:pretty">Cinematic property films, drone footage, hospitality and brand stories, shot and graded to look as high-end as the spaces and products we film.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px">
+<a href="#contact" style="display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 32px;background:#D90000;color:#FFFFFF;border-radius:999px;font-weight:600;font-size:17px">Book a call
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="https://wa.me/919096012144" style="display:inline-flex;align-items:center;min-height:56px;padding:0 28px;border:2px solid #141210;color:#141210;border-radius:999px;font-weight:600;font-size:17px">Chat on WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section aria-label="Our services" style="background:#141210;overflow:hidden;padding:14px 0">
+<div class="marq-track" aria-hidden="true">
+<span>Production</span><i></i><span>Editing</span><i></i><span>Drone Shoot</span><i></i><span>AI Content</span><i></i><span>Real Estate</span><i></i><span>Event Shoots</span><i></i><span>Wedding Shoots</span><i></i><span>Property Coverage</span><i></i><span>Cinematic Shoot</span><i></i><span>Cinematic Editing</span><i></i><span>Podcast Shoot</span><i></i>
+<span>Production</span><i></i><span>Editing</span><i></i><span>Drone Shoot</span><i></i><span>AI Content</span><i></i><span>Real Estate</span><i></i><span>Event Shoots</span><i></i><span>Wedding Shoots</span><i></i><span>Property Coverage</span><i></i><span>Cinematic Shoot</span><i></i><span>Cinematic Editing</span><i></i><span>Podcast Shoot</span><i></i>
+</div>
+</section>
+
+<!-- SHOWREEL -->
+<section id="showreel" aria-label="Showreel" style="max-width:1280px;margin:0 auto;padding:96px 32px 120px">
+<div id="reel" style="position:relative">
+<div class="reel-stage" style="position:relative;aspect-ratio:16/9;background:#1A1814 url(images/showreel.jpg) center/cover no-repeat;border-radius:24px;overflow:hidden;box-shadow:0 36px 70px -28px rgba(20,18,16,.5)">
+<div class="reel-media" style="position:absolute;inset:0"></div>
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(15,14,12,.45),transparent 25%,transparent 60%,rgba(15,14,12,.72))"></div>
+<div style="position:absolute;top:20px;left:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff;display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#D90000"></span>SHOWREEL</div>
+<div style="position:absolute;top:20px;right:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff">00:01:06</div>
+<button id="reel-play" class="rplay" type="button" aria-label="Play showreel with sound" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;border:0;background:#D90000;cursor:pointer;display:flex;align-items:center;justify-content:center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
+</div>
+<div class="reel-bar">
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<button id="reel-sound" class="rbtn ctl" type="button" aria-pressed="false">Sound off</button>
+<button id="reel-pause" class="rbtn ctl" type="button">Pause</button>
+</div>
+<a class="rbtn yt" href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener">
+<svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#fff"/><path d="M8 4l5 3-5 3z" fill="#D90000"/></svg>
+Watch on YouTube</a>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="max-width:1280px;margin:0 auto;padding:0 32px 120px">
+<div style="display:flex;flex-wrap:wrap;gap:24px 64px;align-items:flex-start">
+<div style="flex:1 1 280px">
+<div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#55504A">What we make</div>
+<h2 style="margin:16px 0 0;font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-0.03em;text-wrap:balance">Built for property, hospitality and brands.</h2>
+</div>
+<div style="flex:2 1 520px;min-width:0;border-top:2px solid #141210">
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">01</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">Real estate &amp; architecture</h3><p style="margin:0;color:#55504A;max-width:560px">Cinematic walkthroughs, drone cinematography and architectural photography with natural perspective and true materials.</p></div>
+</div>
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">02</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">Hotels, cafes &amp; restaurants</h3><p style="margin:0;color:#55504A;max-width:560px">Interiors, food and ambience filmed and photographed with accurate whites, natural textures and controlled contrast.</p></div>
+</div>
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">03</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">Brand films &amp; commercials</h3><p style="margin:0;color:#55504A;max-width:560px">Advertising films, corporate shoots and product video and photography, written and directed to sell.</p></div>
+</div>
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">04</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">Reels, editing &amp; motion</h3><p style="margin:0;color:#55504A;max-width:560px">Social media reels, edits, colour grading, motion graphics and thumbnails for brands that post every week.</p></div>
+</div>
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">05</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">AI content</h3><p style="margin:0;color:#55504A;max-width:560px">AI-assisted visuals and videos for ads and social, directed with the same eye for light, framing and realism.</p></div>
+</div>
+<div class="row-link" style="display:grid;grid-template-columns:56px 1fr;gap:8px 16px;padding:32px 12px;border-bottom:1px solid #CFC8C0">
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000">06</span>
+<div><h3 style="margin:0 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:30px;letter-spacing:-0.02em">Events &amp; weddings</h3><p style="margin:0;color:#55504A;max-width:560px">Event coverage and wedding films that feel like the day did, edited with the same cinematic care.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="portfolio" style="max-width:1280px;margin:0 auto;padding:0 32px 120px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:40px">
+<h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-0.03em">Portfolio</h2>
+<a href="portfolio.html" style="color:#141210;border-bottom:2px solid #D90000;padding:8px 0;font-weight:600">View full portfolio</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:24px">
+<a href="https://youtu.be/7DN4Z1Aokmc" target="_blank" rel="noopener" style="display:block">
+<div class="thumb1" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Real Estate Drone Walk-through</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Real estate</span></div>
+</a>
+<a href="https://youtu.be/NiT_kLc16_U" target="_blank" rel="noopener" style="display:block">
+<div class="thumb2" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Udaipur Drone Shoot</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Drone</span></div>
+</a>
+<a href="https://youtu.be/q498bW1mNeU" target="_blank" rel="noopener" style="display:block">
+<div class="thumb3" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Real Estate Land Shoot in Lucknow</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Real estate</span></div>
+</a>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background:#141210;color:#F1ECE6">
+<div style="max-width:1280px;margin:0 auto;padding:112px 32px">
+<div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#B7B0A7">How it works</div>
+<h2 style="margin:16px 0 64px;font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-0.03em;max-width:760px;text-wrap:balance">A production process built for brands that expect more.</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:40px 32px">
+<div style="border-top:2px solid #F1ECE6;padding-top:20px"><div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#FF5A4D">SCENE 01</div><h3 style="margin:12px 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.02em">Strategy &amp; Storyboarding</h3><p style="margin:0;color:#B7B0A7">Every frame is aligned to your business goals through a custom creative treatment and meticulous shot planning, so nothing is left to chance on the day.</p></div>
+<div style="border-top:2px solid #F1ECE6;padding-top:20px"><div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#FF5A4D">SCENE 02</div><h3 style="margin:12px 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.02em">Cinema &amp; Aerial Production</h3><p style="margin:0;color:#B7B0A7">High-impact, cinema-grade visuals with precision camera movement and licensed aerial cinematography, captured to the standard your brand deserves.</p></div>
+<div style="border-top:2px solid #F1ECE6;padding-top:20px"><div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#FF5A4D">SCENE 03</div><h3 style="margin:12px 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.02em">Color, Cut &amp; Sound</h3><p style="margin:0;color:#B7B0A7">Raw footage becomes a high-retention story through bespoke colour grading, refined motion graphics and layered sound design.</p></div>
+<div style="border-top:2px solid #F1ECE6;padding-top:20px"><div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#FF5A4D">SCENE 04</div><h3 style="margin:12px 0 8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.02em">Multi-Format Delivery</h3><p style="margin:0;color:#B7B0A7">Your flagship 4K film, plus ready-to-post vertical cut-downs and high-resolution stills, built to perform on every platform.</p></div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section style="max-width:1280px;margin:0 auto;padding:120px 32px">
+<blockquote style="margin:0;max-width:980px">
+<p style="margin:0;font-family:'Outfit',sans-serif;font-weight:600;font-size:clamp(28px,4vw,48px);line-height:1.15;letter-spacing:-0.02em;text-wrap:balance">We don't just record spaces. We frame the way people <span style="color:#D90000">feel</span> about them.</p>
+<footer style="margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:14px;color:#55504A">FOCUS CINEMA · VIDEO PRODUCTION &amp; ADVERTISING AGENCY</footer>
+</blockquote>
+</section>
+
+<!-- CTA -->
+<section id="contact" style="max-width:1280px;margin:0 auto;padding:0 32px 96px">
+<div style="background:#D90000;color:#FFFFFF;border-radius:28px;padding:clamp(32px,6vw,80px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px">
+<h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(40px,6.5vw,88px);line-height:0.95;letter-spacing:-0.035em;max-width:760px;text-wrap:balance">Let's film something worth showing.</h2>
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a href="mailto:focuscinemaproduction@gmail.com" style="display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 32px;background:#141210;color:#F1ECE6;border-radius:999px;font-weight:600;font-size:17px">Tell us about your project</a>
+<a href="https://wa.me/919096012144" style="display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 28px;border:2px solid #FFFFFF;color:#FFFFFF;border-radius:999px;font-weight:600;font-size:17px">Chat on WhatsApp</a>
+</div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:14px"><a href="mailto:focuscinemaproduction@gmail.com" style="padding:12px 0;display:inline-block;text-decoration:underline">focuscinemaproduction@gmail.com</a> · <a href="tel:+919096012144" style="padding:12px 0;display:inline-block;text-decoration:underline">+91 90960 12144</a></span>
+</div>
+</div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section id="reviews" style="max-width:1280px;margin:0 auto;padding:0 32px 56px">
+<div style="background:#141210;color:#F1ECE6;border-radius:20px;padding:24px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px">
+<div style="flex:1 1 280px;min-width:0">
+<div style="display:flex;gap:6px;margin-bottom:8px" aria-hidden="true">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB400"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB400"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB400"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB400"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFB400"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"></path></svg>
+</div>
+<h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.1;letter-spacing:-0.03em;text-wrap:balance">Worked with Focus Cinema?</h2>
+<p style="margin:6px 0 0;max-width:520px;font-size:15px;color:#B7B0A7;text-wrap:pretty">Your rating and review on Google help other brands find us. It takes less than a minute.</p>
+</div>
+<a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#F1ECE6;color:#141210;border-radius:999px;font-weight:700;font-size:15px">Rate &amp; review us on Google
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="max-width:1280px;margin:0 auto;padding:0 32px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;color:#55504A;font-size:14px">
+<span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:#141210;letter-spacing:-0.02em">Foc<span style="color:#D90000">us</span> Cinema</span>
+<span>Mumbai Metropolitan Region, India · Founded by Faezan Khan</span>
+<div style="display:flex;gap:24px"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener" style="padding:8px 0">YouTube</a></div>
+</footer>
+
+</div>
+</div>
+<div class="fc-frame" id="fc-frame" aria-hidden="true">
+  <svg viewBox="0 0 44 44" focusable="false">
+    <path class="fc-tl" d="M3 15V3h12"></path>
+    <path class="fc-tr" d="M29 3h12v12"></path>
+    <path class="fc-br" d="M41 29v12H29"></path>
+    <path class="fc-bl" d="M15 41H3V29"></path>
+  </svg>
+</div>
+<div class="fc-dot" id="fc-dot" aria-hidden="true"></div>
+
+<script id="fc-cursor-js">
+(function () {
+  // Only for real mouse / trackpad devices
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)");
+  if (!fine.matches) return;
+
+  var root = document.documentElement;
+  var frame = document.getElementById("fc-frame");
+  var dot = document.getElementById("fc-dot");
+  if (!frame || !dot) return;
+
+  /* ---- tuning ---- */
+  var FRAME_EASE = 0.16;   // lower = brackets trail further behind the dot
+  var DOT_EASE   = 0.55;   // higher = dot sticks closer to the real pointer
+  var CLICKABLE  = 'a, button, [role="button"], summary, label[for], select, input[type="submit"], input[type="button"], ' +
+                   '[data-cursor], .video-thumb, .package-card, .pv, .thumb1, .thumb2, .thumb3';
+
+  var mx = -100, my = -100;      // real pointer
+  var fx = mx, fy = my;          // frame position
+  var dx = mx, dy = my;          // dot position
+  var raf = null, shown = false;
+
+  root.classList.add("fc-cursor-on");
+
+  function loop() {
+    fx += (mx - fx) * FRAME_EASE;  fy += (my - fy) * FRAME_EASE;
+    dx += (mx - dx) * DOT_EASE;    dy += (my - dy) * DOT_EASE;
+    frame.style.transform = "translate3d(" + fx.toFixed(2) + "px," + fy.toFixed(2) + "px,0)";
+    dot.style.transform   = "translate3d(" + dx.toFixed(2) + "px," + dy.toFixed(2) + "px,0)";
+    // keep animating while there is still distance to cover
+    if (Math.abs(mx - fx) + Math.abs(my - fy) + Math.abs(mx - dx) + Math.abs(my - dy) > 0.1) {
+      raf = requestAnimationFrame(loop);
+    } else { raf = null; }
+  }
+  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+
+  window.addEventListener("mousemove", function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!shown) { fx = dx = mx; fy = dy = my; shown = true; root.classList.add("fc-visible"); }
+    var t = e.target && e.target.closest ? e.target.closest(CLICKABLE) : null;
+    root.classList.toggle("fc-link", !!t);
+    kick();
+  }, { passive: true });
+
+  window.addEventListener("mousedown", function () { root.classList.add("fc-down"); });
+  window.addEventListener("mouseup",   function () { setTimeout(function () { root.classList.remove("fc-down"); }, 90); });
+
+  // hide when the pointer leaves the window, show again on return
+  document.addEventListener("mouseleave", function () { root.classList.remove("fc-visible"); shown = false; });
+  document.addEventListener("mouseenter", function () { /* shown again on next mousemove */ });
+
+  // if the device type changes (e.g. a touchscreen laptop), switch cleanly
+  var onChange = function () { if (!fine.matches) { root.classList.remove("fc-cursor-on", "fc-visible"); frame.style.display = dot.style.display = "none"; } };
+  if (fine.addEventListener) fine.addEventListener("change", onChange);
+})();
+</script>
+
+<script>
+(function(){
+var ID="C2CJpW53Ucw",frame=document.getElementById("reel");
+if(!frame)return;
+var media=frame.querySelector(".reel-media"),iframe=null,muted=true,paused=false;
+var soundBtn=document.getElementById("reel-sound"),pauseBtn=document.getElementById("reel-pause"),playBtn=document.getElementById("reel-play");
+function send(f,a){if(iframe&&iframe.contentWindow){iframe.contentWindow.postMessage(JSON.stringify({event:"command",func:f,args:a||[]}),"*");}}
+function load(startMuted){
+ if(iframe)return;
+ muted=startMuted;
+ var u="https://www.youtube-nocookie.com/embed/"+ID+"?autoplay=1&mute="+(startMuted?1:0)+"&loop=1&playlist="+ID+"&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&enablejsapi=1";
+ if(location.protocol==="http:"||location.protocol==="https:"){u+="&origin="+encodeURIComponent(location.origin);}
+ iframe=document.createElement("iframe");
+ iframe.src=u;iframe.title="Focus Cinema showreel";
+ iframe.allow="autoplay; encrypted-media; picture-in-picture";
+ iframe.setAttribute("referrerpolicy","strict-origin-when-cross-origin");
+ media.appendChild(iframe);
+ frame.classList.add("is-playing");
+ syncSound();
+}
+function syncSound(){soundBtn.textContent=muted?"Sound off":"Sound on";soundBtn.setAttribute("aria-pressed",muted?"false":"true");}
+soundBtn.addEventListener("click",function(){muted=!muted;send(muted?"mute":"unMute");if(!muted)send("setVolume",[100]);syncSound();});
+pauseBtn.addEventListener("click",function(){paused=!paused;send(paused?"pauseVideo":"playVideo");pauseBtn.textContent=paused?"Play":"Pause";});
+playBtn.addEventListener("click",function(){load(false);});
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduce&&"IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load(true);io.disconnect();}});},{threshold:0.35});
+ io.observe(frame);
+}
+})();
+</script>
+</body>
+</html>

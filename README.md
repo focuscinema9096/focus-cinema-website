@@ -1,17 +1,21 @@
-# Focus Cinema — Official Website
+# Focus Cinema Website
 
-> **Video Production & Advertising Agency**
-> Mumbai Metropolitan Region, India · Founded by Faezan Khan
+Static 3-page website (no build step needed).
 
-Live Production Site: [focuscinemaa.com](https://focuscinemaa.com)
+```
+site/                  <- the deployable website (publish this folder)
+  index.html           Home
+  portfolio.html       Portfolio (9 categories)
+  packages.html        Monthly packages (Basic / Silver / Gold)
+  images/              all photos and video thumbnails
+  404.html  robots.txt  sitemap.xml  favicon.svg
+render.yaml            Render static-site config (publishes ./site)
+ANTIGRAVITY_PROMPT.md  full brief to hand to Antigravity AI
+docs/ADDING_CONTENT.md how to add videos, photos and thumbnails
+```
 
-## Core Features & Stack
-- **Architecture:** Semantic HTML5, Modular CSS3, Vanilla JavaScript.
-- **Cinematic Experience:**
-  - In-Page Theater Lightbox Video Player (4K YouTube embed)
-  - Interactive Camera Viewfinder Focus Cursor with tactile shutter audio
-  - Dynamic Portfolio Filtering (Real Estate, Drone & Aerial, Tourism & Hospitality)
-  - Interactive Project Booking & Consultation Drawer (Instant WhatsApp connect)
-  - Still Photography Gallery with Camera/Lighting technical metadata
-  - Google Reviews integration with 5-star direct link
-- **Performance:** 60fps animations, optimized 4K asset delivery, fully responsive (320px to 4K ultra-wide).
+Preview locally: `cd site && python3 -m http.server 8000` then open http://localhost:8000
+
+Placeholder to replace before launch: `focuscinemaa.com` (canonical, og:url, sitemap, robots, JSON-LD).
+
+Never commit passwords, API keys or hosting credentials to this repo.
