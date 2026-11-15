@@ -4,23 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Monthly Content Packages | Focus Cinema</title>
-<meta name="description" content="Basic, Silver and Gold monthly video content retainers from Focus Cinema: shoot days, edited videos, graphics and page management for brands.">
+<meta name="description" content="Monthly video production retainers for Mumbai brands: Basic, Silver, and Gold tiers for vertical reels, drone cinematography, and scheduled shoots.">
 <link rel="canonical" href="https://focuscinemaa.com/packages.html">
 <meta name="theme-color" content="#ECE7E2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Focus Cinema">
 <meta property="og:title" content="Monthly Content Packages | Focus Cinema">
-<meta property="og:description" content="Basic, Silver and Gold monthly video content retainers from Focus Cinema: shoot days, edited videos, graphics and page management for brands.">
+<meta property="og:description" content="Monthly video production retainers for Mumbai brands: Basic, Silver, and Gold tiers for vertical reels, drone cinematography, and scheduled shoots.">
 <meta property="og:url" content="https://focuscinemaa.com/packages.html">
-<meta property="og:image" content="https://focuscinemaa.com/images/logo.jpg">
+<meta property="og:image" content="https://focuscinemaa.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Monthly Content Packages | Focus Cinema">
+<meta name="twitter:description" content="Monthly video production retainers for Mumbai brands: Basic, Silver, and Gold tiers for vertical reels, drone cinematography, and scheduled shoots.">
+<meta name="twitter:image" content="https://focuscinemaa.com/images/og.jpg">
+<link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-
-body{margin:0;background:#ECE7E2}
-a{color:inherit;text-decoration:none}
 .nav a:hover{color:#141210}
 .bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .bg-grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:64px 64px;animation:gridmove 14s linear infinite}
@@ -31,23 +35,6 @@ a{color:inherit;text-decoration:none}
 .spin svg{animation:spin 60s linear infinite}
 .tag{position:absolute;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;opacity:.4;animation:blink 3s steps(2,end) infinite}
 .dust{position:absolute;width:3px;height:3px;border-radius:50%;background:currentColor;opacity:0;animation:rise 18s linear infinite}
-.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid #141210;border-radius:999px;font-weight:600;font-size:15px;color:#141210;background:transparent}
-.chip:hover{background:#141210;color:#F1ECE6}
-.cat{max-width:1280px;margin:0 auto;padding:0 32px 96px}
-.cat-head{display:flex;align-items:baseline;gap:20px;border-top:2px solid #141210;padding-top:24px;margin-bottom:32px}
-.cat-n{font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000}
-.cat-head h2{margin:0;font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-0.03em}
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px}
-.pv{display:block}
-.pv-t{position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;background-size:cover;background-position:center;overflow:hidden}
-.pv-t.empty{border:2px dashed #BDB5AB;background-image:repeating-linear-gradient(135deg,#E2DCD5 0 18px,#DDD6CE 18px 36px)}
-.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#55504A}
-.pv-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;transition:transform .2s}
-.pv:hover .pv-play{transform:translate(-50%,-50%) scale(1.1)}
-.pv-yt{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:12.5px;font-weight:600}
-.pv-name{display:flex;justify-content:space-between;gap:12px;margin-top:14px}
-.pv-name b{font-family:'Outfit',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.01em}
-.pv-name i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#55504A;padding-top:6px;white-space:nowrap}
 .fc{position:relative}
 .fc-r{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
 .fc-glow{position:absolute;left:50%;top:40px;width:720px;height:360px;max-width:100%;transform:translateX(-50%);border-radius:50%;opacity:.5;filter:blur(90px);pointer-events:none;background:#C3C8CF;transition:background-color .5s ease}
@@ -58,7 +45,7 @@ a{color:inherit;text-decoration:none}
 .fc-tabs label{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font:600 16px 'Inter',sans-serif;color:#141210;cursor:pointer;transition:background-color .3s ease,color .3s ease}
 .fc-tabs label:hover{background:rgba(20,18,16,.08)}
 #pk-basic:checked~.fc-tabs label[for=pk-basic],#pk-silver:checked~.fc-tabs label[for=pk-silver],#pk-gold:checked~.fc-tabs label[for=pk-gold]{background:#141210;color:#F1ECE6;box-shadow:0 8px 20px -10px rgba(20,18,16,.6)}
-#pk-basic:focus-visible~.fc-tabs label[for=pk-basic],#pk-silver:focus-visible~.fc-tabs label[for=pk-silver],#pk-gold:focus-visible~.fc-tabs label[for=pk-gold]{outline:3px solid #141210;outline-offset:3px}
+#pk-basic:focus-visible~.fc-tabs label[for=pk-basic],#pk-silver:focus-visible~.fc-tabs label[for=pk-silver],#pk-gold:focus-visible~.fc-tabs label[for=pk-gold]{outline:3px solid #D90000;outline-offset:3px}
 .fc-panel{display:none;position:relative;margin-top:32px;padding:clamp(24px,5vw,48px);border-radius:28px;border:2px solid #D0C9C1;color:#141210;box-shadow:0 30px 70px -36px rgba(20,18,16,.45)}
 #pk-basic:checked~.t-basic,#pk-silver:checked~.t-silver,#pk-gold:checked~.t-gold{display:block;animation:fcin .35s ease both}
 @keyframes fcin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -91,8 +78,6 @@ a{color:inherit;text-decoration:none}
 .fc-foot{position:relative;margin:24px 0 0;text-align:center;font-size:14px;color:#55504A}
 @media(max-width:640px){.fc-cta{width:100%}}
 @media(prefers-reduced-motion:reduce){.fc-panel{animation:none!important}}
-:focus-visible{outline:3px solid #141210;outline-offset:3px}
-html{scroll-behavior:smooth}
 @keyframes gridmove{to{background-position:64px 64px,64px 64px}}
 @keyframes scan{to{top:100%}}
 @keyframes flicker{0%,100%{opacity:.5}12%{opacity:.28}18%{opacity:.65}46%{opacity:.38}52%{opacity:.6}80%{opacity:.32}}
@@ -100,52 +85,71 @@ html{scroll-behavior:smooth}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{50%{opacity:.1}}
 @keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.5}100%{transform:translateY(-420px);opacity:0}}
-@media(prefers-reduced-motion:reduce){.bg *{animation:none!important}}
-/* Hide the system cursor only when JS confirms a mouse-like device */
-  html.fc-cursor-on, html.fc-cursor-on * { cursor: none !important; }
-
-  /* Two separate fixed layers (not nested) so mix-blend-mode can see the real page behind them */
-  .fc-frame, .fc-dot { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;
-                       opacity: 0; transition: opacity .25s ease; will-change: transform; }
-  html.fc-visible .fc-frame, html.fc-visible .fc-dot { opacity: 1; }
-
-  /* Brackets: white + difference blend = dark on light pages, light on dark pages */
-  .fc-frame { width: 44px; height: 44px; margin: -22px 0 0 -22px; mix-blend-mode: difference; }
-  .fc-frame svg { display: block; width: 100%; height: 100%; overflow: visible; transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-  .fc-frame path { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: square; stroke-linejoin: miter;
-                   transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-
-  /* Recording dot (kept un-blended so it is always crimson) */
-  .fc-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #D90000;
-            box-shadow: 0 0 0 2px rgba(255,255,255,.92), 0 0 0 3px rgba(20,18,16,.25);
-            transition: scale .2s ease, opacity .25s ease; }
-
-  /* FOCUS-LOCK on clickable things: brackets snap inward, dot pulses */
-  html.fc-link .fc-tl { transform: translate(5px, 5px); }
-  html.fc-link .fc-tr { transform: translate(-5px, 5px); }
-  html.fc-link .fc-br { transform: translate(-5px, -5px); }
-  html.fc-link .fc-bl { transform: translate(5px, -5px); }
-  html.fc-link .fc-dot { animation: fc-pulse 1s ease-in-out infinite; }
-  @keyframes fc-pulse { 0%,100% { scale: 1.25; } 50% { scale: 1.75; } }
-
-  /* SHUTTER on press: brackets clamp hard, whole frame flashes smaller */
-  html.fc-down .fc-tl { transform: translate(9px, 9px); }
-  html.fc-down .fc-tr { transform: translate(-9px, 9px); }
-  html.fc-down .fc-br { transform: translate(-9px, -9px); }
-  html.fc-down .fc-bl { transform: translate(9px, -9px); }
-  html.fc-down .fc-dot { animation: none; scale: .7; }
-
-  /* Touch / tablets / no-hover devices: custom cursor never appears */
-  @media (pointer: coarse), (hover: none) { .fc-frame, .fc-dot { display: none !important; } }
-  @media (prefers-reduced-motion: reduce) { html.fc-link .fc-dot { animation: none; scale: 1.4; } .fc-frame path { transition: none; } }
-
-:focus-visible{outline:3px solid #141210;outline-offset:3px}
 html{scroll-behavior:smooth}
-img{max-width:100%}
-
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://focuscinemaa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Packages",
+          "item": "https://focuscinemaa.com/packages.html"
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "Focus Cinema Monthly Content Retainers",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "Basic Monthly Retainer",
+          "description": "The Essential Creator Retainer: 4 vertical videos per month, 2 custom graphics, HD mobile production.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Focus Cinema",
+            "url": "https://focuscinemaa.com/"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Silver Monthly Retainer",
+          "description": "The Brand Growth Retainer: 3 dedicated shoot days on location, 6 high-retention videos, unlimited custom graphics, Page Handle & Aesthetic Management, Sony ZV-E10 and DJI RS 4 gimbal setup.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Focus Cinema",
+            "url": "https://focuscinemaa.com/"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Gold Monthly Retainer",
+          "description": "The Flagship Commercial Retainer: multi-day flagship production shoots, 8 cinematic videos, unlimited graphics, full page handle management, Sony FX30 Cinema Line camera, DJI RS 4 gimbal and DJI Mini 4 Pro 4K aerial drone.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Focus Cinema",
+            "url": "https://focuscinemaa.com/"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <div style="--ac:#D90000;background:#ECE7E2;color:#141210;font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;position:relative">
 
@@ -183,6 +187,8 @@ img{max-width:100%}
 </nav>
 </header>
 
+<main id="main">
+
 <!-- HERO -->
 <section style="max-width:1280px;margin:0 auto;padding:64px 32px 56px">
 <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:28px"><span style="width:10px;height:10px;border-radius:50%;background:#D90000"></span>Monthly Retainers</div>
@@ -193,15 +199,15 @@ img{max-width:100%}
 <!-- PACKAGE SWITCHER -->
 <section id="packages" style="max-width:1040px;margin:0 auto;padding:8px 32px 96px">
 <div class="fc">
-<input class="fc-r" type="radio" name="fcpk" id="pk-basic" aria-label="Basic">
-<input class="fc-r" type="radio" name="fcpk" id="pk-silver" aria-label="Silver" checked>
-<input class="fc-r" type="radio" name="fcpk" id="pk-gold" aria-label="Gold">
+<input class="fc-r" type="radio" name="fcpk" id="pk-basic" aria-label="Basic monthly retainer package">
+<input class="fc-r" type="radio" name="fcpk" id="pk-silver" aria-label="Silver monthly retainer package" checked>
+<input class="fc-r" type="radio" name="fcpk" id="pk-gold" aria-label="Gold monthly retainer package">
 <div class="fc-glow" aria-hidden="true"></div>
 <p class="fc-hint">Choose a package to see exactly what you get.</p>
 <div class="fc-tabs" role="tablist" aria-label="Monthly retainer packages"><label for="pk-basic">Basic</label><label for="pk-silver">Silver</label><label for="pk-gold">Gold</label></div>
-<div class="fc-panel t-basic" role="tabpanel" aria-label="Basic package"><div class="fc-grid"><div><h3 class="fc-name">Basic</h3><p class="fc-tag">The Essential Creator Retainer</p><p class="fc-best"><b>Best for:</b> Solo entrepreneurs, local cafes, and boutique brands starting consistent video output.</p><div class="fc-gear"><small>Production style</small><p>Agility-focused high-definition mobile production (shot on iPhone).</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>4 professionally shot and edited vertical videos (Reels/Shorts) per month</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>2 professionally designed custom brand graphics</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Clean cuts, dynamic captions, and trending audio synchronization</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Professional lighting and setup</span></li></ul><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Basic%20monthly%20package." target="_blank" rel="noopener">Claim Package</a></div></div></div>
-<div class="fc-panel t-silver" role="tabpanel" aria-label="Silver package"><div class="fc-grid"><div><span class="fc-badge">Most Popular · Best Value</span><h3 class="fc-name">Silver</h3><p class="fc-tag">The Brand Growth Retainer</p><p class="fc-best"><b>Best for:</b> Growing local businesses, gyms, clinics, and restaurants ready to dominate their market.</p><div class="fc-gear"><small>Gear advantage</small><p>Sony ZV-E10 mirrorless camera paired with a DJI RS 4 motorized stabilization gimbal.</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>3 dedicated monthly shoot days on location</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>6 professionally edited high-retention videos</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Unlimited custom-designed brand graphics and promotional posts</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Complete Page Handle &amp; Aesthetic Management: grid curation, clean layout, and keyword-optimized descriptions</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Premium custom thumbnails that stop the scroll</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Priority turnaround &amp; support</span></li></ul><p class="fc-note">Handle management only, not active marketing.</p><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Silver%20monthly%20package." target="_blank" rel="noopener">Secure Your Slot</a></div></div></div>
-<div class="fc-panel t-gold" role="tabpanel" aria-label="Gold package"><div class="fc-grid"><div><span class="fc-badge">Flagship</span><h3 class="fc-name">Gold</h3><p class="fc-tag">The Flagship Commercial Retainer</p><p class="fc-best"><b>Best for:</b> Luxury brands, real estate developers, premium hospitality, and businesses demanding elite cinematic authority.</p><div class="fc-gear"><small>Gear advantage</small><p>Sony FX30 Cinema Line camera (4K 10-bit color), DJI RS 4 gimbal, and DJI Mini 4 Pro 4K aerial drone.</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Comprehensive multi-day flagship production shoots</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>8 premium cinematic videos plus unlimited custom-designed brand graphics</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Cinema-grade color grading and advanced sound design</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Full Page Handle &amp; Aesthetic Management: strategic posting schedule, pristine grid aesthetics, optimized descriptions, and high-CTR custom thumbnails</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>VIP priority scheduling and creative direction</span></li></ul><p class="fc-note">Handle management only, not active marketing.</p><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Gold%20monthly%20package." target="_blank" rel="noopener">Book Consultation</a></div></div></div>
+<div class="fc-panel t-basic" role="tabpanel" aria-label="Basic package"><div class="fc-grid"><div><h2 class="fc-name">Basic</h2><p class="fc-tag">The Essential Creator Retainer</p><p class="fc-best"><b>Best for:</b> Solo entrepreneurs, local cafes, and boutique brands starting consistent video output.</p><div class="fc-gear"><small>Production style</small><p>Agility-focused high-definition mobile production (shot on iPhone).</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>4 professionally shot and edited vertical videos (Reels/Shorts) per month</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>2 professionally designed custom brand graphics</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Clean cuts, dynamic captions, and trending audio synchronization</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Professional lighting and setup</span></li></ul><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Basic%20monthly%20package." target="_blank" rel="noopener noreferrer">Claim Package</a></div></div></div>
+<div class="fc-panel t-silver" role="tabpanel" aria-label="Silver package"><div class="fc-grid"><div><span class="fc-badge">Most Popular · Best Value</span><h2 class="fc-name">Silver</h2><p class="fc-tag">The Brand Growth Retainer</p><p class="fc-best"><b>Best for:</b> Growing local businesses, gyms, clinics, and restaurants ready to dominate their market.</p><div class="fc-gear"><small>Gear advantage</small><p>Sony ZV-E10 mirrorless camera paired with a DJI RS 4 motorized stabilization gimbal.</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>3 dedicated monthly shoot days on location</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>6 professionally edited high-retention videos</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Unlimited custom-designed brand graphics and promotional posts</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Complete Page Handle &amp; Aesthetic Management: grid curation, clean layout, and keyword-optimized descriptions</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Premium custom thumbnails that stop the scroll</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Priority turnaround &amp; support</span></li></ul><p class="fc-note">Handle management only, not active marketing.</p><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Silver%20monthly%20package." target="_blank" rel="noopener noreferrer">Secure Your Slot</a></div></div></div>
+<div class="fc-panel t-gold" role="tabpanel" aria-label="Gold package"><div class="fc-grid"><div><span class="fc-badge">Flagship</span><h2 class="fc-name">Gold</h2><p class="fc-tag">The Flagship Commercial Retainer</p><p class="fc-best"><b>Best for:</b> Luxury brands, real estate developers, premium hospitality, and businesses demanding elite cinematic authority.</p><div class="fc-gear"><small>Gear advantage</small><p>Sony FX30 Cinema Line camera (4K 10-bit color), DJI RS 4 gimbal, and DJI Mini 4 Pro 4K aerial drone.</p></div></div><div><ul class="fc-list"><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Comprehensive multi-day flagship production shoots</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>8 premium cinematic videos plus unlimited custom-designed brand graphics</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Cinema-grade color grading and advanced sound design</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>Full Page Handle &amp; Aesthetic Management: strategic posting schedule, pristine grid aesthetics, optimized descriptions, and high-CTR custom thumbnails</span></li><li><svg viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg><span>VIP priority scheduling and creative direction</span></li></ul><p class="fc-note">Handle management only, not active marketing.</p><a class="fc-cta" href="https://wa.me/919096012144?text=Hi%20Focus%20Cinema%2C%20I%20am%20interested%20in%20the%20Gold%20monthly%20package." target="_blank" rel="noopener noreferrer">Book Consultation</a></div></div></div>
 <p class="fc-foot">Every package is tailored to your brand. No fixed templates.</p>
 </div>
 </section>
@@ -222,22 +228,25 @@ img{max-width:100%}
 <section style="max-width:1280px;margin:0 auto;padding:0 32px 96px">
 <div style="background:#D90000;color:#FFFFFF;border-radius:28px;padding:clamp(32px,6vw,80px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px">
 <h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(36px,5.5vw,76px);line-height:0.95;letter-spacing:-0.035em;max-width:760px;text-wrap:balance">Ready to lock in your monthly slot?</h2>
-<div style="display:flex;flex-wrap:wrap;gap:12px">
+<div style="display:flex;flex-wrap:gap;gap:12px">
 <a href="mailto:focuscinemaproduction@gmail.com" style="display:inline-flex;align-items:center;min-height:56px;padding:0 32px;background:#141210;color:#F1ECE6;border-radius:999px;font-weight:600;font-size:17px">Book Consultation</a>
 <a href="https://wa.me/919096012144" style="display:inline-flex;align-items:center;min-height:56px;padding:0 28px;border:2px solid #FFFFFF;color:#FFFFFF;border-radius:999px;font-weight:600;font-size:17px">Chat on WhatsApp</a>
 </div>
 </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer style="max-width:1280px;margin:0 auto;padding:0 32px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;color:#55504A;font-size:14px">
 <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:#141210;letter-spacing:-0.02em">Foc<span style="color:#D90000">us</span> Cinema</span>
 <span>Mumbai Metropolitan Region, India · Founded by Faezan Khan</span>
-<div style="display:flex;gap:24px;flex-wrap:wrap"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener" style="padding:8px 0">YouTube</a><a href="index.html" style="padding:8px 0;text-decoration:underline">Back to home</a></div>
+<div style="display:flex;gap:24px;flex-wrap:wrap"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener noreferrer" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener noreferrer" style="padding:8px 0">YouTube</a><a href="index.html" style="padding:8px 0;text-decoration:underline">Back to home</a></div>
 </footer>
 
 </div>
 </div>
+
 <div class="fc-frame" id="fc-frame" aria-hidden="true">
   <svg viewBox="0 0 44 44" focusable="false">
     <path class="fc-tl" d="M3 15V3h12"/>
@@ -248,63 +257,6 @@ img{max-width:100%}
 </div>
 <div class="fc-dot" id="fc-dot" aria-hidden="true"></div>
 
-<script id="fc-cursor-js">
-(function () {
-  // Only for real mouse / trackpad devices
-  var fine = window.matchMedia("(hover: hover) and (pointer: fine)");
-  if (!fine.matches) return;
-
-  var root = document.documentElement;
-  var frame = document.getElementById("fc-frame");
-  var dot = document.getElementById("fc-dot");
-  if (!frame || !dot) return;
-
-  /* ---- tuning ---- */
-  var FRAME_EASE = 0.16;   // lower = brackets trail further behind the dot
-  var DOT_EASE   = 0.55;   // higher = dot sticks closer to the real pointer
-  var CLICKABLE  = 'a, button, [role="button"], summary, label[for], select, input[type="submit"], input[type="button"], ' +
-                   '[data-cursor], .video-thumb, .package-card, .pv, .thumb1, .thumb2, .thumb3';
-
-  var mx = -100, my = -100;      // real pointer
-  var fx = mx, fy = my;          // frame position
-  var dx = mx, dy = my;          // dot position
-  var raf = null, shown = false;
-
-  root.classList.add("fc-cursor-on");
-
-  function loop() {
-    fx += (mx - fx) * FRAME_EASE;  fy += (my - fy) * FRAME_EASE;
-    dx += (mx - dx) * DOT_EASE;    dy += (my - dy) * DOT_EASE;
-    frame.style.transform = "translate3d(" + fx.toFixed(2) + "px," + fy.toFixed(2) + "px,0)";
-    dot.style.transform   = "translate3d(" + dx.toFixed(2) + "px," + dy.toFixed(2) + "px,0)";
-    // keep animating while there is still distance to cover
-    if (Math.abs(mx - fx) + Math.abs(my - fy) + Math.abs(mx - dx) + Math.abs(my - dy) > 0.1) {
-      raf = requestAnimationFrame(loop);
-    } else { raf = null; }
-  }
-  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
-
-  window.addEventListener("mousemove", function (e) {
-    mx = e.clientX; my = e.clientY;
-    if (!shown) { fx = dx = mx; fy = dy = my; shown = true; root.classList.add("fc-visible"); }
-    var t = e.target && e.target.closest ? e.target.closest(CLICKABLE) : null;
-    root.classList.toggle("fc-link", !!t);
-    kick();
-  }, { passive: true });
-
-  window.addEventListener("mousedown", function () { root.classList.add("fc-down"); });
-  window.addEventListener("mouseup",   function () { setTimeout(function () { root.classList.remove("fc-down"); }, 90); });
-
-  // hide when the pointer leaves the window, show again on return
-  document.addEventListener("mouseleave", function () { root.classList.remove("fc-visible"); shown = false; });
-  document.addEventListener("mouseenter", function () { /* shown again on next mousemove */ });
-
-  // if the device type changes (e.g. a touchscreen laptop), switch cleanly
-  var onChange = function () { if (!fine.matches) { root.classList.remove("fc-cursor-on", "fc-visible"); frame.style.display = dot.style.display = "none"; } };
-  if (fine.addEventListener) fine.addEventListener("change", onChange);
-})();
-</script>
-
-
+<script src="/assets/cursor.js" defer></script>
 </body>
 </html>

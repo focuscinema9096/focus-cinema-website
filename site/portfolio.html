@@ -4,23 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio | Focus Cinema Video Production, Mumbai</title>
-<meta name="description" content="Real estate ads, drone cinematography, hotel and spa films, photography and walk-through films by Focus Cinema. Every sample opens on YouTube or Instagram.">
+<meta name="description" content="Selected work by Focus Cinema Mumbai: cinematic real estate films, aerial drone shoots, luxury hotel campaigns, spa films, and commercial photography.">
 <link rel="canonical" href="https://focuscinemaa.com/portfolio.html">
 <meta name="theme-color" content="#ECE7E2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Focus Cinema">
 <meta property="og:title" content="Portfolio | Focus Cinema Video Production, Mumbai">
-<meta property="og:description" content="Real estate ads, drone cinematography, hotel and spa films, photography and walk-through films by Focus Cinema. Every sample opens on YouTube or Instagram.">
+<meta property="og:description" content="Selected work by Focus Cinema Mumbai: cinematic real estate films, aerial drone shoots, luxury hotel campaigns, spa films, and commercial photography.">
 <meta property="og:url" content="https://focuscinemaa.com/portfolio.html">
-<meta property="og:image" content="https://focuscinemaa.com/images/logo.jpg">
+<meta property="og:image" content="https://focuscinemaa.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Portfolio | Focus Cinema Video Production, Mumbai">
+<meta name="twitter:description" content="Selected work by Focus Cinema Mumbai: cinematic real estate films, aerial drone shoots, luxury hotel campaigns, spa films, and commercial photography.">
+<meta name="twitter:image" content="https://focuscinemaa.com/images/og.jpg">
+<link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-
-body{margin:0;background:#ECE7E2}
-a{color:inherit;text-decoration:none}
 .nav a:hover{color:#141210}
 .bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .bg-grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:64px 64px;animation:gridmove 14s linear infinite}
@@ -31,58 +35,24 @@ a{color:inherit;text-decoration:none}
 .spin svg{animation:spin 60s linear infinite}
 .tag{position:absolute;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;opacity:.4;animation:blink 3s steps(2,end) infinite}
 .dust{position:absolute;width:3px;height:3px;border-radius:50%;background:currentColor;opacity:0;animation:rise 18s linear infinite}
-.chip{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border:1.5px solid #141210;border-radius:999px;font-weight:600;font-size:13px;color:#141210;background:transparent}
+.chip{display:inline-flex;align-items:center;min-height:34px;padding:0 14px;border:1.5px solid #141210;border-radius:999px;font-weight:600;font-size:13px;color:#141210;background:transparent;transition:background-color .2s,color .2s}
 .chip:hover{background:#141210;color:#F1ECE6}
 .cat{max-width:1280px;margin:0 auto;padding:0 32px 96px}
 .cat-head{display:flex;align-items:baseline;gap:20px;border-top:2px solid #141210;padding-top:24px;margin-bottom:32px}
 .cat-n{font-family:'JetBrains Mono',monospace;font-size:14px;color:#B80000}
 .cat-head h2{margin:0;font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-0.03em}
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:24px}
 .pv{display:block}
-.pv-t{position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;background-size:cover;background-position:center;overflow:hidden}
-.pv-t.empty{border:2px dashed #BDB5AB;background-image:repeating-linear-gradient(135deg,#E2DCD5 0 18px,#DDD6CE 18px 36px)}
-.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#55504A}
-.pv-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;transition:transform .2s}
-.pv:hover .pv-play{transform:translate(-50%,-50%) scale(1.1)}
-.pv-yt{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:12.5px;font-weight:600}
+.pv-t{position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden}
+.pv-yt{position:absolute;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:12.5px;font-weight:600;z-index:2}
 .pv-name{display:flex;justify-content:space-between;gap:12px;margin-top:14px}
 .pv-name b{font-family:'Outfit',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.01em}
 .pv-name i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#55504A;padding-top:6px;white-space:nowrap}
-.t1{background-image:url(images/real-estate-walkthrough.jpg)}
-.t2{background-image:url(images/udaipur-drone.jpg)}
-.t3{background-image:url(images/lucknow-land.jpg)}
-.phA{background-image:url(images/photo-1.jpg)}
-.phB{background-image:url(images/photo-2.jpg)}
-.dA{background-image:url(images/drone-1.jpg)}
-.dB{background-image:url(images/drone-2.jpg)}
-.dC{background-image:url(images/drone-3.jpg)}
-.dD{background-image:url(images/drone-4.jpg)}
-.phD{background-image:url(images/photo-4.jpg)}
-.phC{background-image:url(images/photo-3.jpg)}
-.ytcover{background-image:linear-gradient(160deg,#141210 0%,#3A1212 55%,#D90000 130%)}
-.t7{background-image:url(images/novotel.jpg)}
-.t8{background-image:url(images/fairfield-vadodara.jpg)}
-.t6{background-image:url(images/palghar.jpg)}
-.t5{background-image:url(images/manali.jpg)}
-.t4{background-image:url(images/showreel.jpg)}
 .vert .cat-grid{grid-template-columns:repeat(auto-fill,minmax(min(140px,100%),170px));justify-content:start;gap:20px}
 .vert .pv-t{aspect-ratio:9/16;border:6px solid #141210;border-radius:26px;box-shadow:0 24px 50px -24px rgba(20,18,16,.55)}
-.vert .pv-t::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:42px;height:12px;border-radius:999px;background:#141210;z-index:2}
-.vert .pv-t.empty{border:6px solid #141210;background-color:#E2DCD5}
-.igcover{background-image:linear-gradient(160deg,#141210 0%,#3A1212 55%,#D90000 130%)}
-.vert .pv-t.igA{background-image:url(images/reel-1.jpg);background-size:cover;background-position:center}
-.vert .pv-t.igB{background-image:url(images/reel-2.jpg);background-size:cover;background-position:center}
-.vert .pv-t.igC{background-image:url(images/reel-3.jpg);background-size:cover;background-position:center}
-.vert .pv-t.igS1{background-image:url(images/spa-1.jpg);background-size:cover;background-position:center}
-.vert .pv-t.igS2{background-image:url(images/spa-2.jpg);background-size:cover;background-position:center}
-.vert .pv-t.igcover{background-color:#141210}
-.vert .ph{font-size:10px;padding:8px;gap:6px}
-.vert .ph svg{width:26px;height:26px}
+.vert .pv-t::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:42px;height:12px;border-radius:999px;background:#141210;z-index:3}
 .vert .pv-name b{font-size:16px}
-.pv-play{display:none}
 .vert .pv-yt{right:auto;left:50%;transform:translateX(-50%);bottom:10px;white-space:nowrap;font-size:11px;padding:5px 9px}
-:focus-visible{outline:3px solid #141210;outline-offset:3px}
-html{scroll-behavior:smooth}
 @keyframes gridmove{to{background-position:64px 64px,64px 64px}}
 @keyframes scan{to{top:100%}}
 @keyframes flicker{0%,100%{opacity:.5}12%{opacity:.28}18%{opacity:.65}46%{opacity:.38}52%{opacity:.6}80%{opacity:.32}}
@@ -90,53 +60,121 @@ html{scroll-behavior:smooth}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{50%{opacity:.1}}
 @keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.5}100%{transform:translateY(-420px);opacity:0}}
-@media(prefers-reduced-motion:reduce){.bg *{animation:none!important}}
-/* Hide the system cursor only when JS confirms a mouse-like device */
-  html.fc-cursor-on, html.fc-cursor-on * { cursor: none !important; }
-
-  /* Two separate fixed layers (not nested) so mix-blend-mode can see the real page behind them */
-  .fc-frame, .fc-dot { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;
-                       opacity: 0; transition: opacity .25s ease; will-change: transform; }
-  html.fc-visible .fc-frame, html.fc-visible .fc-dot { opacity: 1; }
-
-  /* Brackets: white + difference blend = dark on light pages, light on dark pages */
-  .fc-frame { width: 44px; height: 44px; margin: -22px 0 0 -22px; mix-blend-mode: difference; }
-  .fc-frame svg { display: block; width: 100%; height: 100%; overflow: visible; transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-  .fc-frame path { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: square; stroke-linejoin: miter;
-                   transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-
-  /* Recording dot (kept un-blended so it is always crimson) */
-  .fc-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #D90000;
-            box-shadow: 0 0 0 2px rgba(255,255,255,.92), 0 0 0 3px rgba(20,18,16,.25);
-            transition: scale .2s ease, opacity .25s ease; }
-
-  /* FOCUS-LOCK on clickable things: brackets snap inward, dot pulses */
-  html.fc-link .fc-tl { transform: translate(5px, 5px); }
-  html.fc-link .fc-tr { transform: translate(-5px, 5px); }
-  html.fc-link .fc-br { transform: translate(-5px, -5px); }
-  html.fc-link .fc-bl { transform: translate(5px, -5px); }
-  html.fc-link .fc-dot { animation: fc-pulse 1s ease-in-out infinite; }
-  @keyframes fc-pulse { 0%,100% { scale: 1.25; } 50% { scale: 1.75; } }
-
-  /* SHUTTER on press: brackets clamp hard, whole frame flashes smaller */
-  html.fc-down .fc-tl { transform: translate(9px, 9px); }
-  html.fc-down .fc-tr { transform: translate(-9px, 9px); }
-  html.fc-down .fc-br { transform: translate(-9px, -9px); }
-  html.fc-down .fc-bl { transform: translate(9px, -9px); }
-  html.fc-down .fc-dot { animation: none; scale: .7; }
-
-  /* Touch / tablets / no-hover devices: custom cursor never appears */
-  @media (pointer: coarse), (hover: none) { .fc-frame, .fc-dot { display: none !important; } }
-  @media (prefers-reduced-motion: reduce) { html.fc-link .fc-dot { animation: none; scale: 1.4; } .fc-frame path { transition: none; } }
-
-:focus-visible{outline:3px solid #141210;outline-offset:3px}
 html{scroll-behavior:smooth}
-img{max-width:100%}
-.cat-grid{grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr))}
-
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://focuscinemaa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://focuscinemaa.com/portfolio.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Focus Cinema Portfolio Films",
+      "itemListElement": [
+        {
+          "@type": "VideoObject",
+          "position": 1,
+          "name": "Real Estate Drone Walk-through",
+          "description": "Cinematic real estate drone walkthrough by Focus Cinema Mumbai.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/real-estate-walkthrough.jpg",
+          "contentUrl": "https://youtu.be/7DN4Z1Aokmc",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/7DN4Z1Aokmc",
+          "uploadDate": "2026-05-15T09:25:54-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 2,
+          "name": "Real Estate Land Shoot in Lucknow",
+          "description": "Aerial land shoot and property survey in Lucknow by Focus Cinema.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/lucknow-land.jpg",
+          "contentUrl": "https://youtu.be/q498bW1mNeU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/q498bW1mNeU",
+          "uploadDate": "2026-05-28T23:36:43-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 3,
+          "name": "Palghar Drone Tour",
+          "description": "Cinematic aerial drone tour of Palghar property by Focus Cinema.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/palghar.jpg",
+          "contentUrl": "https://youtu.be/376QBMp52XY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/376QBMp52XY",
+          "uploadDate": "2026-10-31T10:38:53-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 4,
+          "name": "Grand Mercure, GIFT City",
+          "description": "Luxury hotel aerial cinematography of Grand Mercure GIFT City.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/showreel.jpg",
+          "contentUrl": "https://youtu.be/C2CJpW53Ucw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/C2CJpW53Ucw",
+          "uploadDate": "2026-08-22T07:02:35-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 5,
+          "name": "Udaipur Drone Shoot",
+          "description": "Cinematic aerial photography and film of Udaipur by Focus Cinema.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/udaipur-drone.jpg",
+          "contentUrl": "https://youtu.be/NiT_kLc16_U",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/NiT_kLc16_U",
+          "uploadDate": "2026-05-22T20:30:25-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 6,
+          "name": "Himalayan Luxury, Manali",
+          "description": "Luxury mountain resort film in Manali by Focus Cinema.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/manali.jpg",
+          "contentUrl": "https://youtu.be/C51DS185BTU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/C51DS185BTU",
+          "uploadDate": "2026-09-28T06:21:06-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 7,
+          "name": "Novotel Ahmedabad",
+          "description": "Hotel commercial film of Novotel Ahmedabad by Focus Cinema.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/novotel.jpg",
+          "contentUrl": "https://youtu.be/VKlBivu3vtQ",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/VKlBivu3vtQ",
+          "uploadDate": "2026-09-28T05:17:37-07:00"
+        },
+        {
+          "@type": "VideoObject",
+          "position": 8,
+          "name": "Fairfield by Marriott Vadodara",
+          "description": "Hotel cinematic walkthrough film of Fairfield by Marriott Vadodara.",
+          "thumbnailUrl": "https://focuscinemaa.com/images/fairfield-vadodara.jpg",
+          "contentUrl": "https://youtu.be/ygqOHFK4-OU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ygqOHFK4-OU",
+          "uploadDate": "2026-08-22T19:30:25-07:00"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <div style="--ac:#D90000;background:#ECE7E2;color:#141210;font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;position:relative">
 
@@ -174,6 +212,8 @@ img{max-width:100%}
 </nav>
 </header>
 
+<main id="main">
+
 <!-- HERO -->
 <section style="max-width:1280px;margin:0 auto;padding:64px 32px 72px">
 <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:28px">
@@ -196,16 +236,34 @@ img{max-width:100%}
 <section id="real-estate-ads" class="cat vert">
 <div class="cat-head"><span class="cat-n">01</span><h2>Real Estate Ads</h2></div>
 <div class="cat-grid">
-<a class="pv" href="https://www.instagram.com/reel/DdeuxaaxDlZ/" target="_blank" rel="noopener">
-<div class="pv-t igcover igA"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
+<a class="pv" href="https://www.instagram.com/reel/DdeuxaaxDlZ/" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Ad Reel — Watch on Instagram (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/reel-1.avif" type="image/avif">
+  <source srcset="images/reel-1.webp" type="image/webp">
+  <img src="images/reel-1.jpg" alt="Real estate vertical advertisement reel preview" width="798" height="1320" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
 <div class="pv-name"><b>Real Estate Ad</b><i>Reel</i></div>
 </a>
-<a class="pv" href="https://www.instagram.com/reel/DWn22ahiNAd/" target="_blank" rel="noopener">
-<div class="pv-t igcover igB"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
+<a class="pv" href="https://www.instagram.com/reel/DWn22ahiNAd/" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Ad Reel — Watch on Instagram (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/reel-2.avif" type="image/avif">
+  <source srcset="images/reel-2.webp" type="image/webp">
+  <img src="images/reel-2.jpg" alt="Real estate promotional reel preview" width="778" height="1374" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
 <div class="pv-name"><b>Real Estate Ad</b><i>Reel</i></div>
 </a>
-<a class="pv" href="https://www.instagram.com/reel/DV_3yMPCHn5/" target="_blank" rel="noopener">
-<div class="pv-t igcover igC"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
+<a class="pv" href="https://www.instagram.com/reel/DV_3yMPCHn5/" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Ad Reel — Watch on Instagram (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/reel-3.avif" type="image/avif">
+  <source srcset="images/reel-3.webp" type="image/webp">
+  <img src="images/reel-3.jpg" alt="Real estate showcase reel preview" width="800" height="1342" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
 <div class="pv-name"><b>Real Estate Ad</b><i>Reel</i></div>
 </a>
 </div>
@@ -215,10 +273,34 @@ img{max-width:100%}
 <section id="drone-photography" class="cat">
 <div class="cat-head"><span class="cat-n">02</span><h2>Drone Photography</h2></div>
 <div class="cat-grid">
-<div class="pv"><div class="pv-t dA" role="img" aria-label="Aerial view of a lakeside palace city with hills in the distance"></div></div>
-<div class="pv"><div class="pv-t dB" role="img" aria-label="Aerial view of a mountain valley town at golden hour"></div></div>
-<div class="pv"><div class="pv-t dC" role="img" aria-label="Aerial view of a hotel surrounded by coconut palms"></div></div>
-<div class="pv"><div class="pv-t dD" role="img" aria-label="Aerial view of a city skyline and expressway"></div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/drone-1.avif" type="image/avif">
+  <source srcset="images/drone-1.webp" type="image/webp">
+  <img src="images/drone-1.jpg" alt="Aerial view of a lakeside palace city with hills in the distance" width="1672" height="941" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/drone-2.avif" type="image/avif">
+  <source srcset="images/drone-2.webp" type="image/webp">
+  <img src="images/drone-2.jpg" alt="Aerial view of a mountain valley town at golden hour" width="1672" height="941" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/drone-3.avif" type="image/avif">
+  <source srcset="images/drone-3.webp" type="image/webp">
+  <img src="images/drone-3.jpg" alt="Aerial view of a hotel surrounded by coconut palms" width="1672" height="941" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/drone-4.avif" type="image/avif">
+  <source srcset="images/drone-4.webp" type="image/webp">
+  <img src="images/drone-4.jpg" alt="Aerial view of a city skyline and expressway" width="1673" height="940" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
 </div>
 </section>
 
@@ -226,10 +308,34 @@ img{max-width:100%}
 <section id="photography" class="cat">
 <div class="cat-head"><span class="cat-n">03</span><h2>Photography</h2></div>
 <div class="cat-grid">
-<div class="pv"><div class="pv-t phA" role="img" aria-label="Warm modern hotel bedroom with a cove-lit ceiling"></div></div>
-<div class="pv"><div class="pv-t phB" role="img" aria-label="Hotel restaurant with olive green seating and warm lighting"></div></div>
-<div class="pv"><div class="pv-t phC" role="img" aria-label="Hotel guest room with a green panelled headboard"></div></div>
-<div class="pv"><div class="pv-t phD" role="img" aria-label="Hotel king room with a tan leather headboard and warm wall lights"></div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/photo-1.avif" type="image/avif">
+  <source srcset="images/photo-1.webp" type="image/webp">
+  <img src="images/photo-1.jpg" alt="Warm modern hotel bedroom with a cove-lit ceiling" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/photo-2.avif" type="image/avif">
+  <source srcset="images/photo-2.webp" type="image/webp">
+  <img src="images/photo-2.jpg" alt="Hotel restaurant with olive green seating and warm lighting" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/photo-3.avif" type="image/avif">
+  <source srcset="images/photo-3.webp" type="image/webp">
+  <img src="images/photo-3.jpg" alt="Hotel guest room with a green panelled headboard" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
+<div class="pv"><div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/photo-4.avif" type="image/avif">
+  <source srcset="images/photo-4.webp" type="image/webp">
+  <img src="images/photo-4.jpg" alt="Hotel king room with a tan leather headboard and warm wall lights" width="1536" height="1024" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+</div></div>
 </div>
 </section>
 
@@ -237,16 +343,34 @@ img{max-width:100%}
 <section id="real-estate-drone" class="cat">
 <div class="cat-head"><span class="cat-n">04</span><h2>Real Estate Drone Shoot</h2></div>
 <div class="cat-grid">
-<a class="pv" href="https://youtu.be/7DN4Z1Aokmc" target="_blank" rel="noopener">
-<div class="pv-t t1"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/7DN4Z1Aokmc" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Drone Walk-through — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/real-estate-walkthrough.avif" type="image/avif">
+  <source srcset="images/real-estate-walkthrough.webp" type="image/webp">
+  <img src="images/real-estate-walkthrough.jpg" alt="Real Estate Drone Walk-through by Focus Cinema" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Real Estate Drone Walk-through</b><i>Real estate</i></div>
 </a>
-<a class="pv" href="https://youtu.be/q498bW1mNeU" target="_blank" rel="noopener">
-<div class="pv-t t3"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/q498bW1mNeU" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Land Shoot in Lucknow — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/lucknow-land.avif" type="image/avif">
+  <source srcset="images/lucknow-land.webp" type="image/webp">
+  <img src="images/lucknow-land.jpg" alt="Real Estate Land Shoot in Lucknow by Focus Cinema" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Real Estate Land Shoot in Lucknow</b><i>Real estate</i></div>
 </a>
-<a class="pv" href="https://youtu.be/376QBMp52XY" target="_blank" rel="noopener">
-<div class="pv-t t6"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/376QBMp52XY" target="_blank" rel="noopener noreferrer" aria-label="Palghar Drone Tour — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/palghar.avif" type="image/avif">
+  <source srcset="images/palghar.webp" type="image/webp">
+  <img src="images/palghar.jpg" alt="Palghar Drone Tour aerial film by Focus Cinema" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Palghar Drone Tour</b><i>Drone</i></div>
 </a>
 </div>
@@ -256,20 +380,44 @@ img{max-width:100%}
 <section id="hotel-drone" class="cat">
 <div class="cat-head"><span class="cat-n">05</span><h2>Hotel Drone Shoots</h2></div>
 <div class="cat-grid">
-<a class="pv" href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener">
-<div class="pv-t t4"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener noreferrer" aria-label="Grand Mercure, GIFT City — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/showreel.avif" type="image/avif">
+  <source srcset="images/showreel.webp" type="image/webp">
+  <img src="images/showreel.jpg" alt="Grand Mercure GIFT City hotel aerial cinematography" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Grand Mercure, GIFT City</b><i>Hotel</i></div>
 </a>
-<a class="pv" href="https://youtu.be/NiT_kLc16_U" target="_blank" rel="noopener">
-<div class="pv-t t2"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/NiT_kLc16_U" target="_blank" rel="noopener noreferrer" aria-label="Udaipur Drone Shoot — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/udaipur-drone.avif" type="image/avif">
+  <source srcset="images/udaipur-drone.webp" type="image/webp">
+  <img src="images/udaipur-drone.jpg" alt="Udaipur Drone Shoot aerial cinematography" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Udaipur Drone Shoot</b><i>Drone</i></div>
 </a>
-<a class="pv" href="https://youtu.be/C51DS185BTU" target="_blank" rel="noopener">
-<div class="pv-t t5"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/C51DS185BTU" target="_blank" rel="noopener noreferrer" aria-label="Himalayan Luxury, Manali — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/manali.avif" type="image/avif">
+  <source srcset="images/manali.webp" type="image/webp">
+  <img src="images/manali.jpg" alt="Himalayan Luxury Manali resort cinematography" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Himalayan Luxury, Manali</b><i>Hotel</i></div>
 </a>
-<a class="pv" href="https://youtu.be/VKlBivu3vtQ" target="_blank" rel="noopener">
-<div class="pv-t t7"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/VKlBivu3vtQ" target="_blank" rel="noopener noreferrer" aria-label="Novotel Ahmedabad — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/novotel.avif" type="image/avif">
+  <source srcset="images/novotel.webp" type="image/webp">
+  <img src="images/novotel.jpg" alt="Novotel Ahmedabad hotel commercial film" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Novotel Ahmedabad</b><i>Hotel</i></div>
 </a>
 </div>
@@ -279,23 +427,41 @@ img{max-width:100%}
 <section id="spa-cinematic" class="cat vert">
 <div class="cat-head"><span class="cat-n">06</span><h2>Spa Cinematic Shoots</h2></div>
 <div class="cat-grid">
-<a class="pv" href="https://www.instagram.com/reel/DcTsNm2s0ol/" target="_blank" rel="noopener">
-<div class="pv-t igcover igS1"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
+<a class="pv" href="https://www.instagram.com/reel/DcTsNm2s0ol/" target="_blank" rel="noopener noreferrer" aria-label="Health Mantra Reel — Watch on Instagram (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/spa-1.avif" type="image/avif">
+  <source srcset="images/spa-1.webp" type="image/webp">
+  <img src="images/spa-1.jpg" alt="Health Mantra luxury spa vertical film reel" width="802" height="1370" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
 <div class="pv-name"><b>Health Mantra</b><i>Reel</i></div>
 </a>
-<a class="pv" href="https://www.instagram.com/reel/DcTzSmBMqw1/" target="_blank" rel="noopener">
-<div class="pv-t igcover igS2"><span class="pv-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span><span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
+<a class="pv" href="https://www.instagram.com/reel/DcTzSmBMqw1/" target="_blank" rel="noopener noreferrer" aria-label="Prakrutik Spa Reel — Watch on Instagram (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/spa-2.avif" type="image/avif">
+  <source srcset="images/spa-2.webp" type="image/webp">
+  <img src="images/spa-2.jpg" alt="Prakrutik Spa wellness vertical film reel" width="798" height="1378" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="#FFFFFF" stroke="none"></circle></svg>Watch on Instagram</span></div>
 <div class="pv-name"><b>Prakrutik Spa</b><i>Reel</i></div>
 </a>
 </div>
 </section>
 
-<!-- 08 REAL ESTATE CINEMATIC WALK-THROUGH -->
+<!-- 07 REAL ESTATE CINEMATIC WALK-THROUGH -->
 <section id="real-estate-walkthrough" class="cat">
 <div class="cat-head"><span class="cat-n">07</span><h2>Real Estate Cinematic Walk-through</h2></div>
 <div class="cat-grid">
-<a class="pv" href="https://youtu.be/ygqOHFK4-OU" target="_blank" rel="noopener">
-<div class="pv-t ytcover t8"><span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
+<a class="pv" href="https://youtu.be/ygqOHFK4-OU" target="_blank" rel="noopener noreferrer" aria-label="Fairfield by Marriott Vadodara — Watch on YouTube (opens in a new tab)">
+<div class="pv-t">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/fairfield-vadodara.avif" type="image/avif">
+  <source srcset="images/fairfield-vadodara.webp" type="image/webp">
+  <img src="images/fairfield-vadodara.jpg" alt="Fairfield by Marriott Vadodara luxury walk-through film" width="1280" height="720" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span class="pv-yt"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span></div>
 <div class="pv-name"><b>Fairfield by Marriott Vadodara</b><i>Walk-through</i></div>
 </a>
 </div>
@@ -326,20 +492,23 @@ img{max-width:100%}
 <h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.1;letter-spacing:-0.03em;text-wrap:balance">Worked with Focus Cinema?</h2>
 <p style="margin:6px 0 0;max-width:520px;font-size:15px;color:#B7B0A7;text-wrap:pretty">Your rating and review on Google help other brands find us. It takes less than a minute.</p>
 </div>
-<a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#F1ECE6;color:#141210;border-radius:999px;font-weight:700;font-size:15px">Rate &amp; review us on Google
+<a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener noreferrer" aria-label="Rate and review Focus Cinema on Google (opens in a new tab)" style="display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#F1ECE6;color:#141210;border-radius:999px;font-weight:700;font-size:15px">Rate &amp; review us on Google
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
 </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer style="max-width:1280px;margin:0 auto;padding:0 32px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;color:#55504A;font-size:14px">
 <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:#141210;letter-spacing:-0.02em">Foc<span style="color:#D90000">us</span> Cinema</span>
 <span>Mumbai Metropolitan Region, India · Founded by Faezan Khan</span>
-<div style="display:flex;gap:24px;flex-wrap:wrap"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener" style="padding:8px 0">YouTube</a><a href="index.html" style="padding:8px 0;text-decoration:underline">Back to home</a></div>
+<div style="display:flex;gap:24px;flex-wrap:wrap"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener noreferrer" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener noreferrer" style="padding:8px 0">YouTube</a><a href="index.html" style="padding:8px 0;text-decoration:underline">Back to home</a></div>
 </footer>
 
 </div>
 </div>
+
 <div class="fc-frame" id="fc-frame" aria-hidden="true">
   <svg viewBox="0 0 44 44" focusable="false">
     <path class="fc-tl" d="M3 15V3h12"></path>
@@ -350,63 +519,6 @@ img{max-width:100%}
 </div>
 <div class="fc-dot" id="fc-dot" aria-hidden="true"></div>
 
-<script id="fc-cursor-js">
-(function () {
-  // Only for real mouse / trackpad devices
-  var fine = window.matchMedia("(hover: hover) and (pointer: fine)");
-  if (!fine.matches) return;
-
-  var root = document.documentElement;
-  var frame = document.getElementById("fc-frame");
-  var dot = document.getElementById("fc-dot");
-  if (!frame || !dot) return;
-
-  /* ---- tuning ---- */
-  var FRAME_EASE = 0.16;   // lower = brackets trail further behind the dot
-  var DOT_EASE   = 0.55;   // higher = dot sticks closer to the real pointer
-  var CLICKABLE  = 'a, button, [role="button"], summary, label[for], select, input[type="submit"], input[type="button"], ' +
-                   '[data-cursor], .video-thumb, .package-card, .pv, .thumb1, .thumb2, .thumb3';
-
-  var mx = -100, my = -100;      // real pointer
-  var fx = mx, fy = my;          // frame position
-  var dx = mx, dy = my;          // dot position
-  var raf = null, shown = false;
-
-  root.classList.add("fc-cursor-on");
-
-  function loop() {
-    fx += (mx - fx) * FRAME_EASE;  fy += (my - fy) * FRAME_EASE;
-    dx += (mx - dx) * DOT_EASE;    dy += (my - dy) * DOT_EASE;
-    frame.style.transform = "translate3d(" + fx.toFixed(2) + "px," + fy.toFixed(2) + "px,0)";
-    dot.style.transform   = "translate3d(" + dx.toFixed(2) + "px," + dy.toFixed(2) + "px,0)";
-    // keep animating while there is still distance to cover
-    if (Math.abs(mx - fx) + Math.abs(my - fy) + Math.abs(mx - dx) + Math.abs(my - dy) > 0.1) {
-      raf = requestAnimationFrame(loop);
-    } else { raf = null; }
-  }
-  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
-
-  window.addEventListener("mousemove", function (e) {
-    mx = e.clientX; my = e.clientY;
-    if (!shown) { fx = dx = mx; fy = dy = my; shown = true; root.classList.add("fc-visible"); }
-    var t = e.target && e.target.closest ? e.target.closest(CLICKABLE) : null;
-    root.classList.toggle("fc-link", !!t);
-    kick();
-  }, { passive: true });
-
-  window.addEventListener("mousedown", function () { root.classList.add("fc-down"); });
-  window.addEventListener("mouseup",   function () { setTimeout(function () { root.classList.remove("fc-down"); }, 90); });
-
-  // hide when the pointer leaves the window, show again on return
-  document.addEventListener("mouseleave", function () { root.classList.remove("fc-visible"); shown = false; });
-  document.addEventListener("mouseenter", function () { /* shown again on next mousemove */ });
-
-  // if the device type changes (e.g. a touchscreen laptop), switch cleanly
-  var onChange = function () { if (!fine.matches) { root.classList.remove("fc-cursor-on", "fc-visible"); frame.style.display = dot.style.display = "none"; } };
-  if (fine.addEventListener) fine.addEventListener("change", onChange);
-})();
-</script>
-
-
+<script src="/assets/cursor.js" defer></script>
 </body>
 </html>

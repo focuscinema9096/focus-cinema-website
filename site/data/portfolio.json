@@ -1,0 +1,212 @@
+{
+  "sections": [
+    {
+      "id": "re-ads",
+      "number": "01",
+      "title": "Real Estate Ads",
+      "type": "vertical",
+      "items": [
+        {
+          "title": "Real Estate Ad",
+          "category": "Reel",
+          "platform": "instagram",
+          "url": "https://www.instagram.com/reel/DdeuxaaxDlZ/",
+          "image": "images/reel-1.jpg",
+          "alt": "Real estate vertical reel advertisement preview"
+        },
+        {
+          "title": "Real Estate Ad",
+          "category": "Reel",
+          "platform": "instagram",
+          "url": "https://www.instagram.com/reel/DWn22ahiNAd/",
+          "image": "images/reel-2.jpg",
+          "alt": "Real estate promotional reel preview"
+        },
+        {
+          "title": "Real Estate Ad",
+          "category": "Reel",
+          "platform": "instagram",
+          "url": "https://www.instagram.com/reel/DV_3yMPCHn5/",
+          "image": "images/reel-3.jpg",
+          "alt": "Real estate showcase reel preview"
+        }
+      ]
+    },
+    {
+      "id": "drone-photo",
+      "number": "02",
+      "title": "Drone Photography",
+      "type": "photo",
+      "items": [
+        {
+          "title": "Aerial Cityscape & Infrastructure",
+          "image": "images/drone-1.jpg",
+          "alt": "Aerial drone shot over Mumbai metropolitan skyline"
+        },
+        {
+          "title": "Coastal & Waterfront Aerial",
+          "image": "images/drone-2.jpg",
+          "alt": "Aerial drone view of coastline and property development"
+        },
+        {
+          "title": "Architectural Overhead View",
+          "image": "images/drone-3.jpg",
+          "alt": "High-altitude architectural drone cinematography capture"
+        },
+        {
+          "title": "Luxury Estate Aerial Perspective",
+          "image": "images/drone-4.jpg",
+          "alt": "Cinematic aerial survey of expansive luxury property"
+        }
+      ]
+    },
+    {
+      "id": "photo",
+      "number": "03",
+      "title": "Photography",
+      "type": "photo",
+      "items": [
+        {
+          "title": "Interior Architectural Photography",
+          "image": "images/photo-1.jpg",
+          "alt": "High-end commercial interior architectural photography"
+        },
+        {
+          "title": "Hospitality & Dining Atmosphere",
+          "image": "images/photo-2.jpg",
+          "alt": "Luxury hotel hospitality and ambience commercial photography"
+        },
+        {
+          "title": "Architectural Detail & Lighting",
+          "image": "images/photo-3.jpg",
+          "alt": "Architectural detail and natural light photography"
+        },
+        {
+          "title": "Executive Space & Workspace",
+          "image": "images/photo-4.jpg",
+          "alt": "Commercial executive interior photography"
+        }
+      ]
+    },
+    {
+      "id": "re-drone",
+      "number": "04",
+      "title": "Real Estate Drone Shoot",
+      "type": "video",
+      "items": [
+        {
+          "title": "Real Estate Drone Walk-through",
+          "category": "Real estate",
+          "platform": "youtube",
+          "videoId": "7DN4Z1Aokmc",
+          "url": "https://youtu.be/7DN4Z1Aokmc",
+          "image": "images/real-estate-walkthrough.jpg",
+          "alt": "Real Estate Drone Walk-through by Focus Cinema"
+        },
+        {
+          "title": "Real Estate Land Shoot in Lucknow",
+          "category": "Real estate",
+          "platform": "youtube",
+          "videoId": "q498bW1mNeU",
+          "url": "https://youtu.be/q498bW1mNeU",
+          "image": "images/lucknow-land.jpg",
+          "alt": "Real Estate Land Shoot in Lucknow by Focus Cinema"
+        }
+      ]
+    },
+    {
+      "id": "hotel-drone",
+      "number": "05",
+      "title": "Hotel Drone Shoots",
+      "type": "video",
+      "items": [
+        {
+          "title": "Palghar Drone Tour",
+          "category": "Drone",
+          "platform": "youtube",
+          "videoId": "376QBMp52XY",
+          "url": "https://youtu.be/376QBMp52XY",
+          "image": "images/palghar.jpg",
+          "alt": "Palghar Drone Tour aerial film by Focus Cinema"
+        },
+        {
+          "title": "Grand Mercure, GIFT City",
+          "category": "Hotel",
+          "platform": "youtube",
+          "videoId": "C2CJpW53Ucw",
+          "url": "https://youtu.be/C2CJpW53Ucw",
+          "image": "images/showreel.jpg",
+          "alt": "Grand Mercure GIFT City hotel cinematography"
+        },
+        {
+          "title": "Udaipur Drone Shoot",
+          "category": "Drone",
+          "platform": "youtube",
+          "videoId": "NiT_kLc16_U",
+          "url": "https://youtu.be/NiT_kLc16_U",
+          "image": "images/udaipur-drone.jpg",
+          "alt": "Udaipur Drone Shoot aerial film by Focus Cinema"
+        },
+        {
+          "title": "Himalayan Luxury, Manali",
+          "category": "Hotel",
+          "platform": "youtube",
+          "videoId": "C51DS185BTU",
+          "url": "https://youtu.be/C51DS185BTU",
+          "image": "images/manali.jpg",
+          "alt": "Himalayan Luxury Manali luxury resort film"
+        },
+        {
+          "title": "Novotel Ahmedabad",
+          "category": "Hotel",
+          "platform": "youtube",
+          "videoId": "VKlBivu3vtQ",
+          "url": "https://youtu.be/VKlBivu3vtQ",
+          "image": "images/novotel.jpg",
+          "alt": "Novotel Ahmedabad hotel commercial film"
+        }
+      ]
+    },
+    {
+      "id": "spa-cinematic",
+      "number": "06",
+      "title": "Spa Cinematic Shoots",
+      "type": "vertical",
+      "items": [
+        {
+          "title": "Health Mantra",
+          "category": "Reel",
+          "platform": "instagram",
+          "url": "https://www.instagram.com/reel/DcTsNm2s0ol/",
+          "image": "images/spa-1.jpg",
+          "alt": "Health Mantra luxury spa vertical film reel"
+        },
+        {
+          "title": "Prakrutik Spa",
+          "category": "Reel",
+          "platform": "instagram",
+          "url": "https://www.instagram.com/reel/DcTzSmBMqw1/",
+          "image": "images/spa-2.jpg",
+          "alt": "Prakrutik Spa wellness vertical film reel"
+        }
+      ]
+    },
+    {
+      "id": "re-walkthrough",
+      "number": "07",
+      "title": "Real Estate Cinematic Walk-through",
+      "type": "video",
+      "items": [
+        {
+          "title": "Fairfield by Marriott Vadodara",
+          "category": "Walk-through",
+          "platform": "youtube",
+          "videoId": "ygqOHFK4-OU",
+          "url": "https://youtu.be/ygqOHFK4-OU",
+          "image": "images/fairfield-vadodara.jpg",
+          "alt": "Fairfield by Marriott Vadodara luxury walk-through film"
+        }
+      ]
+    }
+  ]
+}

@@ -4,30 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Focus Cinema | Video Production &amp; Advertising Agency, Mumbai</title>
-<meta name="description" content="Focus Cinema is a video production and advertising agency in the Mumbai region: cinematic real estate films, drone shoots, brand films, hospitality, events, weddings and podcast shoots.">
+<meta name="description" content="Focus Cinema is a Mumbai video production and advertising agency: cinematic real estate films, aerial drone shoots, brand campaigns, and hospitality.">
 <link rel="canonical" href="https://focuscinemaa.com/">
 <meta name="theme-color" content="#ECE7E2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Focus Cinema">
 <meta property="og:title" content="Focus Cinema | Video Production &amp; Advertising Agency, Mumbai">
-<meta property="og:description" content="Focus Cinema is a video production and advertising agency in the Mumbai region: cinematic real estate films, drone shoots, brand films, hospitality, events, weddings and podcast shoots.">
+<meta property="og:description" content="Focus Cinema is a Mumbai video production and advertising agency: cinematic real estate films, aerial drone shoots, brand campaigns, and hospitality.">
 <meta property="og:url" content="https://focuscinemaa.com/">
-<meta property="og:image" content="https://focuscinemaa.com/images/logo.jpg">
+<meta property="og:image" content="https://focuscinemaa.com/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta name="twitter:title" content="Focus Cinema | Video Production &amp; Advertising Agency, Mumbai">
+<meta name="twitter:description" content="Focus Cinema is a Mumbai video production and advertising agency: cinematic real estate films, aerial drone shoots, brand campaigns, and hospitality.">
+<meta name="twitter:image" content="https://focuscinemaa.com/images/og.jpg">
+<link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/images/showreel.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-
-body{margin:0;background:#ECE7E2}
-a{color:inherit;text-decoration:none}
 .nav a:hover{color:#141210}
 .row-link:hover{background:#E1DBD4}
-.thumb1{background-image:url(images/real-estate-walkthrough.jpg);background-size:cover;background-position:center}
-.thumb2{background-image:url(images/udaipur-drone.jpg);background-size:cover;background-position:center}
-.thumb3{background-image:url(images/lucknow-land.jpg);background-size:cover;background-position:center}
-@keyframes reelpan{0%{background-size:108% auto;background-position:30% 60%}100%{background-size:122% auto;background-position:70% 40%}}
-@media(prefers-reduced-motion:reduce){}
 .bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .bg-grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(currentColor 1px,transparent 1px),linear-gradient(90deg,currentColor 1px,transparent 1px);background-size:64px 64px;animation:gridmove 14s linear infinite}
 .bg-scan{position:absolute;left:0;right:0;top:-200px;height:180px;opacity:.05;background:linear-gradient(transparent,currentColor,transparent);animation:scan 11s linear infinite}
@@ -82,64 +82,21 @@ a{color:inherit;text-decoration:none}
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(.88)}}
 @keyframes marq{to{transform:translateX(-50%)}}
 @media(max-width:900px){.bg-filmwrap,.tl,.wave,.wheel,.vf{display:none}.bg-big{width:520px;height:520px;right:-200px}}
-@media(prefers-reduced-motion:reduce){.bg *,.focus,.float,.vf,.marq-track{animation:none!important}}
-/* Hide the system cursor only when JS confirms a mouse-like device */
-  html.fc-cursor-on, html.fc-cursor-on * { cursor: none !important; }
-
-  /* Two separate fixed layers (not nested) so mix-blend-mode can see the real page behind them */
-  .fc-frame, .fc-dot { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;
-                       opacity: 0; transition: opacity .25s ease; will-change: transform; }
-  html.fc-visible .fc-frame, html.fc-visible .fc-dot { opacity: 1; }
-
-  /* Brackets: white + difference blend = dark on light pages, light on dark pages */
-  .fc-frame { width: 44px; height: 44px; margin: -22px 0 0 -22px; mix-blend-mode: difference; }
-  .fc-frame svg { display: block; width: 100%; height: 100%; overflow: visible; transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-  .fc-frame path { fill: none; stroke: #fff; stroke-width: 3.2; stroke-linecap: square; stroke-linejoin: miter;
-                   transition: transform .22s cubic-bezier(.2,.8,.2,1); }
-
-  /* Recording dot (kept un-blended so it is always crimson) */
-  .fc-dot { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #D90000;
-            box-shadow: 0 0 0 2px rgba(255,255,255,.92), 0 0 0 3px rgba(20,18,16,.25);
-            transition: scale .2s ease, opacity .25s ease; }
-
-  /* FOCUS-LOCK on clickable things: brackets snap inward, dot pulses */
-  html.fc-link .fc-tl { transform: translate(5px, 5px); }
-  html.fc-link .fc-tr { transform: translate(-5px, 5px); }
-  html.fc-link .fc-br { transform: translate(-5px, -5px); }
-  html.fc-link .fc-bl { transform: translate(5px, -5px); }
-  html.fc-link .fc-dot { animation: fc-pulse 1s ease-in-out infinite; }
-  @keyframes fc-pulse { 0%,100% { scale: 1.25; } 50% { scale: 1.75; } }
-
-  /* SHUTTER on press: brackets clamp hard, whole frame flashes smaller */
-  html.fc-down .fc-tl { transform: translate(9px, 9px); }
-  html.fc-down .fc-tr { transform: translate(-9px, 9px); }
-  html.fc-down .fc-br { transform: translate(-9px, -9px); }
-  html.fc-down .fc-bl { transform: translate(9px, -9px); }
-  html.fc-down .fc-dot { animation: none; scale: .7; }
-
-  /* Touch / tablets / no-hover devices: custom cursor never appears */
-  @media (pointer: coarse), (hover: none) { .fc-frame, .fc-dot { display: none !important; } }
-  @media (prefers-reduced-motion: reduce) { html.fc-link .fc-dot { animation: none; scale: 1.4; } .fc-frame path { transition: none; } }
-
-
 .rbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.75);background:rgba(20,18,16,.55);color:#fff;font:600 15px/1 'Inter',system-ui,sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .rbtn.yt{background:#D90000;border-color:#D90000}
 #reel .ctl{display:none}
 #reel.is-playing .ctl{display:inline-flex}
 #reel.is-playing #reel-play{display:none}
-#reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+#reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;z-index:2}
 #reel :focus-visible{outline-color:#fff}
-.reel-bar{position:absolute;left:20px;right:20px;bottom:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.reel-bar{position:absolute;left:20px;right:20px;bottom:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;z-index:3}
 @media(max-width:640px){
 .reel-bar{position:static;margin-top:14px}
 .rbtn:not(.yt){color:#141210;border-color:#141210;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
 .reel-stage{border-radius:18px !important}
 .rplay{width:72px !important;height:72px !important}
 }
-:focus-visible{outline:3px solid #141210;outline-offset:3px}
 html{scroll-behavior:smooth}
-img{max-width:100%}
-
 </style>
 <script type="application/ld+json">
 {
@@ -148,18 +105,35 @@ img{max-width:100%}
   "name": "Focus Cinema",
   "description": "Video production and advertising agency: real estate films, drone cinematography, brand films, hospitality, events, weddings, podcast shoots, editing and AI content.",
   "url": "https://focuscinemaa.com/",
-  "logo": "https://focuscinemaa.com/images/logo.jpg",
-  "image": "https://focuscinemaa.com/images/logo.jpg",
+  "logo": "https://focuscinemaa.com/images/og.jpg",
+  "image": "https://focuscinemaa.com/images/og.jpg",
   "telephone": "+919096012144",
   "email": "focuscinemaproduction@gmail.com",
-  "founder": {"@type": "Person", "name": "Faezan Khan"},
-  "areaServed": "Mumbai Metropolitan Region, India",
-  "address": {"@type": "PostalAddress", "addressRegion": "Maharashtra", "addressCountry": "IN"},
-  "sameAs": ["https://www.instagram.com/focuscinemaa","https://www.youtube.com/@FocusCinemaproduction"]
+  "priceRange": "$$",
+  "founder": {
+    "@type": "Person",
+    "name": "Faezan Khan"
+  },
+  "areaServed": [
+    "Mumbai",
+    "Thane",
+    "Navi Mumbai",
+    "Mumbai Metropolitan Region, India"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.instagram.com/focuscinemaa",
+    "https://www.youtube.com/@FocusCinemaproduction"
+  ]
 }
 </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <div style="background:#ECE7E2;color:#141210;font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden;position:relative">
 
@@ -220,6 +194,8 @@ img{max-width:100%}
 </nav>
 </header>
 
+<main id="main">
+
 <!-- HERO -->
 <section id="top" style="max-width:1280px;margin:0 auto;padding:56px 32px 72px;position:relative">
 <div class="vf" style="top:12px;left:8px;border-right:0;border-bottom:0" aria-hidden="true"></div>
@@ -251,12 +227,17 @@ img{max-width:100%}
 <!-- SHOWREEL -->
 <section id="showreel" aria-label="Showreel" style="max-width:1280px;margin:0 auto;padding:96px 32px 120px">
 <div id="reel" style="position:relative">
-<div class="reel-stage" style="position:relative;aspect-ratio:16/9;background:#1A1814 url(images/showreel.jpg) center/cover no-repeat;border-radius:24px;overflow:hidden;box-shadow:0 36px 70px -28px rgba(20,18,16,.5)">
+<div class="reel-stage" style="position:relative;aspect-ratio:16/9;background-color:#1A1814;border-radius:24px;overflow:hidden;box-shadow:0 36px 70px -28px rgba(20,18,16,.5)">
+<picture style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none">
+  <source srcset="images/showreel.avif" type="image/avif">
+  <source srcset="images/showreel.webp" type="image/webp">
+  <img src="images/showreel.jpg" alt="Focus Cinema Showreel preview featuring high-end cinematography" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
 <div class="reel-media" style="position:absolute;inset:0"></div>
-<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(15,14,12,.45),transparent 25%,transparent 60%,rgba(15,14,12,.72))"></div>
-<div style="position:absolute;top:20px;left:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff;display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#D90000"></span>SHOWREEL</div>
-<div style="position:absolute;top:20px;right:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff">00:01:06</div>
-<button id="reel-play" class="rplay" type="button" aria-label="Play showreel with sound" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;border:0;background:#D90000;cursor:pointer;display:flex;align-items:center;justify-content:center">
+<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(15,14,12,.45),transparent 25%,transparent 60%,rgba(15,14,12,.72));z-index:1"></div>
+<div style="position:absolute;top:20px;left:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff;display:flex;align-items:center;gap:10px;z-index:2"><span style="width:9px;height:9px;border-radius:50%;background:#D90000"></span>SHOWREEL</div>
+<div style="position:absolute;top:20px;right:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff;z-index:2">00:01:06</div>
+<button id="reel-play" class="rplay" type="button" aria-label="Play showreel with sound" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;border:0;background:#D90000;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2">
 <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
 </div>
 <div class="reel-bar">
@@ -264,7 +245,7 @@ img{max-width:100%}
 <button id="reel-sound" class="rbtn ctl" type="button" aria-pressed="false">Sound off</button>
 <button id="reel-pause" class="rbtn ctl" type="button">Pause</button>
 </div>
-<a class="rbtn yt" href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener">
+<a class="rbtn yt" href="https://youtu.be/C2CJpW53Ucw" target="_blank" rel="noopener noreferrer" aria-label="Focus Cinema Showreel — Watch on YouTube (opens in a new tab)">
 <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#fff"/><path d="M8 4l5 3-5 3z" fill="#D90000"/></svg>
 Watch on YouTube</a>
 </div>
@@ -314,24 +295,39 @@ Watch on YouTube</a>
 <a href="portfolio.html" style="color:#141210;border-bottom:2px solid #D90000;padding:8px 0;font-weight:600">View full portfolio</a>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:24px">
-<a href="https://youtu.be/7DN4Z1Aokmc" target="_blank" rel="noopener" style="display:block">
-<div class="thumb1" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
-<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
-<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+<a href="https://youtu.be/7DN4Z1Aokmc" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Drone Walk-through — Watch on YouTube (opens in a new tab)" style="display:block">
+<div style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/real-estate-walkthrough.avif" type="image/avif">
+  <source srcset="images/real-estate-walkthrough.webp" type="image/webp">
+  <img src="images/real-estate-walkthrough.jpg" alt="Real Estate Drone Walk-through by Focus Cinema" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center;z-index:2"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600;z-index:2"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
 </div>
 <div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Real Estate Drone Walk-through</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Real estate</span></div>
 </a>
-<a href="https://youtu.be/NiT_kLc16_U" target="_blank" rel="noopener" style="display:block">
-<div class="thumb2" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
-<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
-<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+<a href="https://youtu.be/NiT_kLc16_U" target="_blank" rel="noopener noreferrer" aria-label="Udaipur Drone Shoot — Watch on YouTube (opens in a new tab)" style="display:block">
+<div style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/udaipur-drone.avif" type="image/avif">
+  <source srcset="images/udaipur-drone.webp" type="image/webp">
+  <img src="images/udaipur-drone.jpg" alt="Udaipur Drone Shoot by Focus Cinema" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center;z-index:2"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600;z-index:2"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
 </div>
 <div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Udaipur Drone Shoot</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Drone</span></div>
 </a>
-<a href="https://youtu.be/q498bW1mNeU" target="_blank" rel="noopener" style="display:block">
-<div class="thumb3" style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
-<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
-<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
+<a href="https://youtu.be/q498bW1mNeU" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Land Shoot in Lucknow — Watch on YouTube (opens in a new tab)" style="display:block">
+<div style="position:relative;aspect-ratio:16/10;border:1px solid #D0C9C1;border-radius:16px;background-color:#E2DCD5;overflow:hidden">
+<picture style="position:absolute;inset:0;width:100%;height:100%">
+  <source srcset="images/lucknow-land.avif" type="image/avif">
+  <source srcset="images/lucknow-land.webp" type="image/webp">
+  <img src="images/lucknow-land.jpg" alt="Real Estate Land Shoot in Lucknow by Focus Cinema" width="1600" height="900" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
+</picture>
+<span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#D90000;display:flex;align-items:center;justify-content:center;z-index:2"><svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></span>
+<span style="position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#141210;color:#F1ECE6;font-size:13px;font-weight:600;z-index:2"><svg width="18" height="13" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="4" fill="#FFFFFF"></rect><path d="M8 4l5 3-5 3z" fill="#D90000"></path></svg>Watch on YouTube</span>
 </div>
 <div style="display:flex;justify-content:space-between;gap:16px;margin-top:16px"><span style="font-family:'Outfit',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em">Real Estate Land Shoot in Lucknow</span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#55504A;padding-top:8px">Real estate</span></div>
 </a>
@@ -388,20 +384,23 @@ Watch on YouTube</a>
 <h2 style="margin:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);line-height:1.1;letter-spacing:-0.03em;text-wrap:balance">Worked with Focus Cinema?</h2>
 <p style="margin:6px 0 0;max-width:520px;font-size:15px;color:#B7B0A7;text-wrap:pretty">Your rating and review on Google help other brands find us. It takes less than a minute.</p>
 </div>
-<a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#F1ECE6;color:#141210;border-radius:999px;font-weight:700;font-size:15px">Rate &amp; review us on Google
+<a href="https://share.google/0YecEpl7yazQiMZ4p" target="_blank" rel="noopener noreferrer" aria-label="Rate and review Focus Cinema on Google (opens in a new tab)" style="display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:#F1ECE6;color:#141210;border-radius:999px;font-weight:700;font-size:15px">Rate &amp; review us on Google
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
 </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer style="max-width:1280px;margin:0 auto;padding:0 32px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;color:#55504A;font-size:14px">
 <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;color:#141210;letter-spacing:-0.02em">Foc<span style="color:#D90000">us</span> Cinema</span>
 <span>Mumbai Metropolitan Region, India · Founded by Faezan Khan</span>
-<div style="display:flex;gap:24px"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener" style="padding:8px 0">YouTube</a></div>
+<div style="display:flex;gap:24px"><a href="https://www.instagram.com/focuscinemaa" target="_blank" rel="noopener noreferrer" style="padding:8px 0">Instagram</a><a href="https://www.youtube.com/@FocusCinemaproduction" target="_blank" rel="noopener noreferrer" style="padding:8px 0">YouTube</a></div>
 </footer>
 
 </div>
 </div>
+
 <div class="fc-frame" id="fc-frame" aria-hidden="true">
   <svg viewBox="0 0 44 44" focusable="false">
     <path class="fc-tl" d="M3 15V3h12"></path>
@@ -412,62 +411,7 @@ Watch on YouTube</a>
 </div>
 <div class="fc-dot" id="fc-dot" aria-hidden="true"></div>
 
-<script id="fc-cursor-js">
-(function () {
-  // Only for real mouse / trackpad devices
-  var fine = window.matchMedia("(hover: hover) and (pointer: fine)");
-  if (!fine.matches) return;
-
-  var root = document.documentElement;
-  var frame = document.getElementById("fc-frame");
-  var dot = document.getElementById("fc-dot");
-  if (!frame || !dot) return;
-
-  /* ---- tuning ---- */
-  var FRAME_EASE = 0.16;   // lower = brackets trail further behind the dot
-  var DOT_EASE   = 0.55;   // higher = dot sticks closer to the real pointer
-  var CLICKABLE  = 'a, button, [role="button"], summary, label[for], select, input[type="submit"], input[type="button"], ' +
-                   '[data-cursor], .video-thumb, .package-card, .pv, .thumb1, .thumb2, .thumb3';
-
-  var mx = -100, my = -100;      // real pointer
-  var fx = mx, fy = my;          // frame position
-  var dx = mx, dy = my;          // dot position
-  var raf = null, shown = false;
-
-  root.classList.add("fc-cursor-on");
-
-  function loop() {
-    fx += (mx - fx) * FRAME_EASE;  fy += (my - fy) * FRAME_EASE;
-    dx += (mx - dx) * DOT_EASE;    dy += (my - dy) * DOT_EASE;
-    frame.style.transform = "translate3d(" + fx.toFixed(2) + "px," + fy.toFixed(2) + "px,0)";
-    dot.style.transform   = "translate3d(" + dx.toFixed(2) + "px," + dy.toFixed(2) + "px,0)";
-    // keep animating while there is still distance to cover
-    if (Math.abs(mx - fx) + Math.abs(my - fy) + Math.abs(mx - dx) + Math.abs(my - dy) > 0.1) {
-      raf = requestAnimationFrame(loop);
-    } else { raf = null; }
-  }
-  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
-
-  window.addEventListener("mousemove", function (e) {
-    mx = e.clientX; my = e.clientY;
-    if (!shown) { fx = dx = mx; fy = dy = my; shown = true; root.classList.add("fc-visible"); }
-    var t = e.target && e.target.closest ? e.target.closest(CLICKABLE) : null;
-    root.classList.toggle("fc-link", !!t);
-    kick();
-  }, { passive: true });
-
-  window.addEventListener("mousedown", function () { root.classList.add("fc-down"); });
-  window.addEventListener("mouseup",   function () { setTimeout(function () { root.classList.remove("fc-down"); }, 90); });
-
-  // hide when the pointer leaves the window, show again on return
-  document.addEventListener("mouseleave", function () { root.classList.remove("fc-visible"); shown = false; });
-  document.addEventListener("mouseenter", function () { /* shown again on next mousemove */ });
-
-  // if the device type changes (e.g. a touchscreen laptop), switch cleanly
-  var onChange = function () { if (!fine.matches) { root.classList.remove("fc-cursor-on", "fc-visible"); frame.style.display = dot.style.display = "none"; } };
-  if (fine.addEventListener) fine.addEventListener("change", onChange);
-})();
-</script>
+<script src="/assets/cursor.js" defer></script>
 
 <script>
 (function(){
